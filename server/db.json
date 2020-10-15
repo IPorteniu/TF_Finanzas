@@ -1,0 +1,280 @@
+{
+  "subscribers": [
+    {
+      "id": 1,
+      "firstName": "Rubena",
+      "lastName": "Ayala",
+      "age": 23,
+      "programId": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Jim",
+      "lastName": "Parson",
+      "age": 18,
+      "programId": 2
+    },
+    {
+      "id": 3,
+      "firstName": "Liu",
+      "lastName": "Quan",
+      "age": 37,
+      "programId": 4
+    },
+    {
+      "id": 4,
+      "firstName": "Stella",
+      "lastName": "Jimenez",
+      "age": 45,
+      "programId": 2
+    },
+    {
+      "id": 5,
+      "firstName": "Fred",
+      "lastName": "Stars",
+      "age": 12,
+      "programId": 5
+    },
+    {
+      "id": 6,
+      "firstName": "Migue",
+      "lastName": "Migue",
+      "age": "32",
+      "programId": "2",
+      "published": true
+    },
+    {
+      "firstName": "Liu",
+      "lastName": "Kang",
+      "age": "18",
+      "id": 7,
+      "programId": "4",
+      "published": false
+    },
+    {
+      "firstName": "Kung ",
+      "lastName": "Lao",
+      "age": "25",
+      "id": 8
+    },
+    {
+      "firstName": "Fabrizio",
+      "lastName": "Castellano",
+      "age": "12",
+      "id": 9,
+      "programId": "54",
+      "published": true
+    },
+    {
+      "firstName": "Mario",
+      "lastName": "Luigi",
+      "age": "69",
+      "id": 10
+    },
+    {
+      "firstName": "Luis",
+      "lastName": "Ordoñez",
+      "age": "19",
+      "id": 11
+    },
+    {
+      "firstName": "Dylan",
+      "lastName": "Shinoda",
+      "age": "19",
+      "id": 12
+    }
+  ],
+  "credits":[
+    {
+      "id": 1,
+      "customer_id": 1,
+      "currency_id": 1,
+      "active": 1,
+      "amount": 100.00,
+      "created_in": "09-26-2020",
+      "arrears" : 0.05
+    },
+    {
+      "id": 2,
+      "customer_id": 2,
+      "currency_id": 2,
+      "active": 0,
+      "amount": 100.00,
+      "created_in": "06-15-2020",
+      "arrears" : 1.05
+    }
+  ],
+  "credit_details": [
+    {
+      "id": 1,
+      "credit_id" : 1,
+      "maintenance": 5.00,
+      "maintenance_date" : "7",
+      "percentage": 0.10,
+      "rate_term_id" : 1.40
+    },
+    {
+      "id": 2,
+      "credit_id" : 2,
+      "maintenance": 8.75,
+      "maintenance_date" : "14",
+      "percentage": 0.035,
+      "rate_term_id" : 1.40
+    }
+  ],
+  "rate_terms" : [
+    {
+      "id" : 1,
+      "rate_id" : 1,
+      "term_id" : 1
+    }
+  ],
+  "rates" : [
+    {
+      "id": 1,
+      "name": "Efectiva Semestral",
+      "rate_day": 180
+    },
+    {
+      "id": 2,
+      "name": "Efectiva Trimestral",
+      "rate_day": 90
+    }
+  ],
+  "terms" : [
+    {
+    "id": 1,
+    "name": "blablabla",
+    "time": 1.20
+    }
+  ],
+  "customers": [
+    {
+      "id": 3,
+      "owner_id": 1,
+      "email": "lporteniu@gmail.com",
+      "first_name": "Luis",
+      "last_name": "Ordonez",
+      "phone": 940400876,
+      "address": "jiron dona pepa",
+      "password": "un elefante se balanceba"
+     },
+    {
+      "id": 1,
+      "owner_id": 1,
+      "email": "customer1@gmail.com",
+      "first_name": "Pedro",
+      "last_name": "Rodriguez",
+      "phone": 940567123,
+      "address": "Schell Street",
+      "password": "1234La02"
+    },
+    {
+      "id": 2,
+      "owner_id": 1,
+      "email": "dylandonayre@gmail.com",
+      "first_name": "Dylan",
+      "last_name": "Donayre",
+      "phone": 934123765,
+      "address": "Chiclayo Street",
+      "password": "4321Lo0"
+    }
+
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "dni": "99023467",
+      "password": "123lala"
+    },
+    {
+      "id": 2,
+      "dni": 123563,
+      "password": "432lala"
+    }
+  ],
+  "invoices": [
+    {
+      "id": 1,
+      "credit_id": 1,
+      "status_id": 0,
+      "charges": 54.00,
+      "start_date": "09-01-2020",
+      "end_date": "2020-05-04"
+    },
+    {
+      "id": 2,
+      "credit_id": 1,
+      "status_id": 0,
+      "charges": 35.50,
+      "start_date": "01-01-2020",
+      "end_date": "01-30-2020"
+    }
+  ],
+  "status": [
+    {
+      "id": 0,
+      "name": "active"
+    },
+    {
+      "id": 1,
+      "name": "inactive"
+    }
+  ],
+  "currencies": [
+    {
+      "id": 1,
+      "name": "sol peruano",
+      "unit": "sol"
+    },
+    {
+      "id": 2,
+      "name": "dolar estadounidense",
+      "unit": "usd"
+    }
+
+  ],
+  "products": [
+    {
+      "id": 1,
+      "currency_id": 1,
+      "price": 10.00,
+      "name": "Shampoo"
+    },
+    {
+      "id": 2,
+      "currency_id": 1,
+      "price": 7.50,
+      "name": "Foco"
+    }
+  ],
+  "order_details": [
+    {
+      "product_id": 1,
+      "order_id": 1,
+      "quantity": 2
+    },
+    {
+      "product_id": 2,
+      "order_id": 1,
+      "quantity": 2
+    },
+    {
+      "product_id": 2,
+      "order_id": 2,
+      "quantity": 5
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "invoice_id": 1,
+      "date": "09-26-2020"
+    },
+    {
+      "id": 2,
+      "invoice_id": 2,
+      "date": "06-15-2020"
+    }
+  ]
+}

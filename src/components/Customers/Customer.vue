@@ -1,5 +1,7 @@
 <template>
-  
+  <div>
+    <p>holi</p>
+  </div>
 </template>
 
 <script>

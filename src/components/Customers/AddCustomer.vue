@@ -1,5 +1,8 @@
 <template>
-  
+  <div>
+    <p>holi</p>
+    <button @click="saveCustomer" class="btn btn-success">Submit</button>
+  </div>
 </template>
 
 <script>

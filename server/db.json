@@ -84,52 +84,52 @@
       "id": 12
     }
   ],
-  "credits":[
+  "credits": [
     {
       "id": 1,
       "customer_id": 1,
       "currency_id": 1,
       "active": 1,
-      "amount": 100.00,
+      "amount": 100,
       "created_in": "09-26-2020",
-      "arrears" : 0.05
+      "arrears": 0.05
     },
     {
       "id": 2,
       "customer_id": 2,
       "currency_id": 2,
       "active": 0,
-      "amount": 100.00,
+      "amount": 100,
       "created_in": "06-15-2020",
-      "arrears" : 1.05
+      "arrears": 1.05
     }
   ],
   "credit_details": [
     {
       "id": 1,
-      "credit_id" : 1,
-      "maintenance": 5.00,
-      "maintenance_date" : "7",
-      "percentage": 0.10,
-      "rate_term_id" : 1.40
+      "credit_id": 1,
+      "maintenance": 5,
+      "maintenance_date": "7",
+      "percentage": 0.1,
+      "rate_term_id": 1.4
     },
     {
       "id": 2,
-      "credit_id" : 2,
+      "credit_id": 2,
       "maintenance": 8.75,
-      "maintenance_date" : "14",
+      "maintenance_date": "14",
       "percentage": 0.035,
-      "rate_term_id" : 1.40
+      "rate_term_id": 1.4
     }
   ],
-  "rate_terms" : [
+  "rate_terms": [
     {
-      "id" : 1,
-      "rate_id" : 1,
-      "term_id" : 1
+      "id": 1,
+      "rate_id": 1,
+      "term_id": 1
     }
   ],
-  "rates" : [
+  "rates": [
     {
       "id": 1,
       "name": "Efectiva Semestral",
@@ -141,11 +141,11 @@
       "rate_day": 90
     }
   ],
-  "terms" : [
+  "terms": [
     {
-    "id": 1,
-    "name": "blablabla",
-    "time": 1.20
+      "id": 1,
+      "name": "blablabla",
+      "time": 1.2
     }
   ],
   "customers": [
@@ -158,7 +158,7 @@
       "phone": 940400876,
       "address": "jiron dona pepa",
       "password": "un elefante se balanceba"
-     },
+    },
     {
       "id": 1,
       "owner_id": 1,
@@ -179,7 +179,6 @@
       "address": "Chiclayo Street",
       "password": "4321Lo0"
     }
-
   ],
   "owners": [
     {
@@ -198,7 +197,7 @@
       "id": 1,
       "credit_id": 1,
       "status_id": 0,
-      "charges": 54.00,
+      "charges": 54,
       "start_date": "09-01-2020",
       "end_date": "2020-05-04"
     },
@@ -206,7 +205,7 @@
       "id": 2,
       "credit_id": 1,
       "status_id": 0,
-      "charges": 35.50,
+      "charges": 35.5,
       "start_date": "01-01-2020",
       "end_date": "01-30-2020"
     }
@@ -232,20 +231,25 @@
       "name": "dolar estadounidense",
       "unit": "usd"
     }
-
   ],
   "products": [
     {
       "id": 1,
       "currency_id": 1,
-      "price": 10.00,
+      "price": 10,
       "name": "Shampoo"
     },
     {
       "id": 2,
       "currency_id": 1,
-      "price": 7.50,
+      "price": 7.5,
       "name": "Foco"
+    },
+    {
+      "name": "Suavitel 500 ml",
+      "price": 29.9,
+      "currencyId": 1,
+      "id": 3
     }
   ],
   "order_details": [

@@ -236,7 +236,7 @@
     {
       "id": 1,
       "currency_id": 1,
-      "price": 10,
+      "price": "11",
       "name": "Shampoo"
     },
     {

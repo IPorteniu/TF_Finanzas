@@ -20,13 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="280dadd3-0042-4594-a99e-f044beeb8064" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Sales/AddProduct.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sales/Product.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sales/ProductsList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Customers/AddCustomer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/AddCustomer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Customers/Customer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Customer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Customers/CustomersList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/CustomersList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http-common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/http-common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +111,7 @@
       <workItem from="1603936156213" duration="601000" />
       <workItem from="1603989602808" duration="1716000" />
       <workItem from="1604007087069" duration="6064000" />
-      <workItem from="1604079136859" duration="11603000" />
+      <workItem from="1604079136859" duration="14635000" />
     </task>
     <servers />
   </component>

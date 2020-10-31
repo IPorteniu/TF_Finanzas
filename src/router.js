@@ -12,6 +12,8 @@ export default new Router({
         { path: "/customers/:id", name: "customer-details", component: () => import("./components/Users/Customer") },
         { path: "/register1", name: "register", component: () => import("./components/Users/AddCustomer")},
         { path: "/register", name: "register", component: () => import("./components/AddSubscriber")},
-        { path: "/add-products", name:"register-product", component: () => import("./components/Sales/AddProduct")}
-    ] 
+        { path: "/add-products", name:"register-product", component: () => import("./components/Sales/AddProduct")},
+        { path: "/products", name:"products-list", component: () => import("./components/Sales/ProductsList")},
+        { path: "/products/:id", name: "product-details", component: () => import("./components/Sales/Product") }
+    ]
 });

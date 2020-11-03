@@ -198,8 +198,8 @@
       "credit_id": 1,
       "status_id": 0,
       "charges": 54,
-      "start_date": "09-01-2020",
-      "end_date": "2020-05-04"
+      "start_date": "01-09-2020",
+      "end_date": "04-10-2020"
     },
     {
       "id": 2,
@@ -207,7 +207,7 @@
       "status_id": 0,
       "charges": 35.5,
       "start_date": "01-01-2020",
-      "end_date": "01-30-2020"
+      "end_date": "30-01-2020"
     }
   ],
   "status": [
@@ -273,12 +273,12 @@
     {
       "id": 1,
       "invoice_id": 1,
-      "date": "09-26-2020"
+      "date": "15-09-2020"
     },
     {
       "id": 2,
       "invoice_id": 2,
-      "date": "06-15-2020"
+      "date": "15-10-2020"
     }
   ]
 }

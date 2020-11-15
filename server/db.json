@@ -1,13 +1,6 @@
 {
   "subscribers": [
     {
-      "id": 1,
-      "firstName": "Rubena",
-      "lastName": "Ayala",
-      "age": 23,
-      "programId": 1
-    },
-    {
       "id": 2,
       "firstName": "Jim",
       "lastName": "Parson",
@@ -82,26 +75,59 @@
       "lastName": "Shinoda",
       "age": "19",
       "id": 12
+    },
+    {
+      "firstName": "Jose",
+      "lastName": "Armando",
+      "age": "19",
+      "id": 13
     }
   ],
   "credits": [
     {
       "id": 1,
       "customer_id": 1,
-      "currency_id": 1,
+      "currency_id": 2,
       "active": 1,
-      "amount": 100,
-      "created_in": "09-26-2020",
-      "arrears": 0.05
+      "amount": 160,
+      "created_in": "06-15-2020",
+      "arrears": 1.05
     },
     {
       "id": 2,
       "customer_id": 2,
       "currency_id": 2,
-      "active": 0,
+      "active": 1,
+      "amount": 90,
+      "created_in": "06-15-2020",
+      "arrears": 1.05
+    },
+    {
+      "id": 3,
+      "customer_id": 5,
+      "currency_id": 2,
+      "active": 1,
       "amount": 100,
       "created_in": "06-15-2020",
       "arrears": 1.05
+    },
+    {
+      "id": 4,
+      "customer_id": 3,
+      "currency_id": 2,
+      "active": 1,
+      "amount": 100,
+      "created_in": "06-15-2020",
+      "arrears": 1.05
+    },
+    {
+      "customer_id": 4,
+      "currency_id": 1,
+      "active": 0,
+      "amount": 500,
+      "created_in": "11-15-2020",
+      "arrears": 10,
+      "id": 5
     }
   ],
   "credit_details": [
@@ -109,59 +135,65 @@
       "id": 1,
       "credit_id": 1,
       "maintenance": 5,
-      "maintenance_date": "7",
       "percentage": 0.1,
-      "rate_term_id": 1.4
+      "rate_id": 1,
+      "term_id": 1,
+      "capitalization": "Trimestral"
     },
     {
       "id": 2,
       "credit_id": 2,
       "maintenance": 8.75,
-      "maintenance_date": "14",
       "percentage": 0.035,
-      "rate_term_id": 1.4
-    }
-  ],
-  "rate_terms": [
-    {
-      "id": 1,
       "rate_id": 1,
-      "term_id": 1
+      "term_id": 1,
+      "capitalization": "Anual"
+    },
+    {
+      "credit_id": 5,
+      "maintenance": 11,
+      "percentage": 5,
+      "rate_id": 2,
+      "term_id": 3,
+      "capitalization": "Trimestral",
+      "id": 3
     }
   ],
   "rates": [
     {
       "id": 1,
-      "name": "Efectiva Semestral",
-      "rate_day": 180
+      "name": "Simple"
     },
     {
       "id": 2,
-      "name": "Efectiva Trimestral",
-      "rate_day": 90
+      "name": "Efectiva"
+    },
+    {
+      "id": 3,
+      "name": "Nominal"
     }
   ],
   "terms": [
     {
       "id": 1,
-      "name": "blablabla",
-      "time": 1.2
+      "name": "Trimestral",
+      "time": 90
+    },
+    {
+      "id": 2,
+      "name": "Semestral",
+      "time": 180
+    },
+    {
+      "id": 3,
+      "name": "Anual",
+      "time": 360
     }
   ],
   "customers": [
     {
-      "id": 3,
-      "owner_id": 1,
-      "email": "lporteniu@gmail.com",
-      "first_name": "Luis",
-      "last_name": "Ordonez",
-      "phone": 940400876,
-      "address": "jiron dona pepa",
-      "password": "un elefante se balanceba"
-    },
-    {
       "id": 1,
-      "owner_id": 1,
+      "owner_id": 2,
       "email": "customer1@gmail.com",
       "first_name": "Pedro",
       "last_name": "Rodriguez",
@@ -178,17 +210,47 @@
       "phone": 934123765,
       "address": "Chiclayo Street",
       "password": "4321Lo0"
+    },
+    {
+      "id": 3,
+      "owner_id": 1,
+      "email": "lporteniu@gmail.com",
+      "first_name": "Luis",
+      "last_name": "Ordonez",
+      "phone": 940400876,
+      "address": "jiron dona pepa",
+      "password": "un elefante se balanceba"
+    },
+    {
+      "owner_id": "1",
+      "email": "sofia@gmail.com",
+      "first_name": "Sofia ",
+      "last_name": "Bravo",
+      "phone": "987654321",
+      "address": "Av. Dos de mayo",
+      "password": "contraseña",
+      "id": 4
+    },
+    {
+      "owner_id": "2",
+      "email": "shino@gmail.com",
+      "first_name": "Keiji",
+      "last_name": "Shinoda",
+      "phone": "987153635",
+      "address": "Av. Tres de Mayo",
+      "password": "contraseña",
+      "id": 5
     }
   ],
   "owners": [
     {
       "id": 1,
-      "dni": "99023467",
+      "ruc": "99023467",
       "password": "123lala"
     },
     {
       "id": 2,
-      "dni": 123563,
+      "ruc": 123563,
       "password": "432lala"
     }
   ],
@@ -199,7 +261,7 @@
       "status_id": 0,
       "charges": 54,
       "start_date": "01-09-2020",
-      "end_date": "04-10-2020"
+      "end_date": "01-30-2020"
     },
     {
       "id": 2,
@@ -207,7 +269,15 @@
       "status_id": 0,
       "charges": 35.5,
       "start_date": "01-01-2020",
-      "end_date": "30-01-2020"
+      "end_date": "01-30-2020"
+    },
+    {
+      "credit_id": 5,
+      "status_id": 0,
+      "charges": 0,
+      "start_date": "11-15-2020",
+      "end_date": "11-30-2020",
+      "id": 3
     }
   ],
   "status": [

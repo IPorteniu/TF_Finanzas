@@ -15,8 +15,16 @@ export default new Router({
         { path: "/add-credit/:id", name: "add-credit", component: () => import("./components/Screens/AddCredit") },
         { path: "/add-credit/:id/:credit_id", name: "add-credit-detail", component: () => import("./components/Screens/AddCredit-detail") },
 
-        { path: "/add-sale/:id", name: "register-sale", component: () => import("./components/Screens/AddSale") },
+        { path: "/add-sale/customer/:id/invoice/:invoice_id/order/:order_id", name: "register-sale", component: () => import("./components/Screens/AddSale") },
+        { path: "/order-detail/:order_id/owner-view/:owner_id", name: "order-detail", component: () => import("./components/Screens/OrderDetail") },
+        { path: "/order-detail/:order_id/view/:customer_id", name: "order-detail", component: () => import("./components/Screens/OrderDetail") },
+
         { path: "/add-customer/:id", name: "register-customer", component: () => import("./components/Screens/AddCustomer") },
+        { path: "/customer-profile/:id", name: "customer-profile", component: () => import("./components/Screens/ViewCustomer") },
+        { path: "/customer-profile/:customer_id/credit/:credit_id/detail/:detail_id/invoice/:invoice_id", name: "customer-profile-detail", component: () => import("./components/Screens/ViewCustomerCredit") },
+        { path: "/credit-payment/customer/:customer_id/credit/:credit_id/detail/:detail_id/invoice/:invoice_id", name: "customer-pay", component: () => import("./components/Screens/PagarDeuda") },
+
+
 
         //OTHER ROUTES
         // Customers routes
@@ -33,7 +41,7 @@ export default new Router({
         { path: "/orders/:id", name: "specific-order", component: () => import("./components/Sales/Order") },
 
         { path: "/subscribers/:id", name: "subscriber-details", component: () => import("./components/Subscriber") },
-        { path: "/register", name: "register", component: () => import("./components/AddSubscriber")}
+        { path: "/register", name: "registerS", component: () => import("./components/AddSubscriber")}
         
     ]
 });

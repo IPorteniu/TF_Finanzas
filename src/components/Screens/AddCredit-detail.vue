@@ -1,25 +1,11 @@
 <template>
-  <div class="col-sm-6 col-md-6 col-lg-6">
+  <div class="col-sm-24 col-md-24 col-lg-24 shadow">
     <h4>Detalles de la línea:</h4>
     <form>
-      <p>Tipo de tasa</p>
       <div class="container">
         <div class="row">
-          <div class="col-sm-6 col-md-6 col-lg-6">
-            <ul class="list-group">
-              <li
-                style="background-color: #ffa504"
-                class="list-group-item"
-                :class="{ active: index === currentIndex }"
-                v-for="(term, index) in terms"
-                :key="index"
-                @click="setActiveTerm(term, index)"
-              >
-                {{ term.name }}
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <p>Tipo de tasa</p>
             <ul class="list-group">
               <li
                 style="background-color: #ffa504"
@@ -33,7 +19,24 @@
               </li>
             </ul>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-6" v-if="currentRate">
+
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <p>Periodo</p>
+            <ul class="list-group">
+              <li
+                style="background-color: #ffa504"
+                class="list-group-item"
+                :class="{ active: index === currentIndex }"
+                v-for="(term, index) in terms"
+                :key="index"
+                @click="setActiveTerm(term, index)"
+              >
+                {{ term.name }}
+              </li>
+            </ul>
+          </div>
+          
+          <div class="col-sm-3 col-md-3 col-lg-3" v-if="currentRate">
             <ul
               class="list-group"
               v-if="
@@ -55,36 +58,59 @@
           </div>
         </div>
       </div>
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group" v-if="currentRate">
+          <label for="rate"></label>
+          <input
+            type="text"
+            class="form-control differ"
+            id="rate"
+            v-model="currentRate.name"
+            readonly
+          />
+        </div>
 
-      <div class="form-group" v-if="currentCap">
-        <label for="capitalization">Capitalización</label>
-        <input
-          type="text"
-          class="form-control"
-          id="capitalization"
-          v-model="currentCap.name"
-          readonly
-        />
-      </div>
+        <div class="form-group" v-if="currentTerm">
+          <label for="term"></label>
+          <input
+            type="text"
+            class="form-control differ"
+            id="term"
+            v-model="currentTerm.name"
+            readonly
+          />
+        </div>
 
-      <div class="form-group">
-        <label for="percentage">Tasa (%)</label>
-        <input
-          type="text"
-          class="form-control"
-          id="percentage"
-          v-model="credit_detail.percentage"
-        />
-      </div>
+        <div class="form-group" v-if="currentCap">
+          <label for="capitalization">Capitalización</label>
+          <input
+            type="text"
+            class="form-control differ"
+            id="capitalization"
+            v-model="currentCap.name"
+            readonly
+          />
+        </div>
 
-      <div class="form-group">
-        <label for="maintenance">Costo fijo de mantenimiento</label>
-        <input
-          type="text"
-          class="form-control"
-          id="maintenance"
-          v-model="credit_detail.maintenance"
-        />
+        <div class="form-group">
+          <label for="percentage">Tasa (%)</label>
+          <input
+            type="text"
+            class="form-control"
+            id="percentage"
+            v-model="credit_detail.percentage"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="maintenance">Costo fijo de mantenimiento</label>
+          <input
+            type="text"
+            class="form-control"
+            id="maintenance"
+            v-model="credit_detail.maintenance"
+          />
+        </div>
       </div>
     </form>
     <button class="badge badge-success" @click="saveCreditDetails">
@@ -199,6 +225,16 @@ export default {
       this.currentIndexRate = index;
       this.currentCap = null;
       this.currentIndexCap = -1;
+      if (
+        this.currentRate.name == "Efectiva" ||
+        this.currentRate.name == "Nominal"
+      ) {
+        this.currentIndex = 2;
+        this.currentIndexCap = 3;
+      }
+      if (this.currentRate.name == "Simple") {
+        this.currentIndex = 2;
+      }
     },
     setActiveCap(cap, index) {
       this.currentCap = cap;
@@ -212,7 +248,7 @@ export default {
         percentage: parseInt(this.credit_detail.percentage),
         rate_id: this.currentRate.id,
         term_id: this.currentTerm.id,
-        capitalization: this.currentCap.name,
+        capitalization: this.currentCap,
       };
       console.log(data);
 
@@ -229,7 +265,7 @@ export default {
     },
   },
   mounted() {
-    console.log(this.$route.params)
+    console.log(this.$route.params);
     this.getTutorial(this.$route.params.id);
     this.retrieveTerms();
     this.retrieveRates();
@@ -242,5 +278,21 @@ export default {
   max-width: 1100px;
   margin: auto;
   margin-left: 60px;
+}
+.shadow {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 20px 6px -6px #999;
+    z-index: 1000;
+    height: 720px;
+    width: 700px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 0px;
+    margin-left: 300px;
+
+    padding: 20px;
+}
+.differ{
+  margin: -7px;
 }
 </style>

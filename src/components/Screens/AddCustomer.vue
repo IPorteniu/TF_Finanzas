@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col-sm-6 col-md-6 col-lg-6">
+    <div class="col-sm-6 col-md-6 col-lg-6 shadow">
       <h4>Detalles del Cliente:</h4>
       <div class="submit-form">
         <div v-if="!submitted">
@@ -133,4 +133,17 @@ export default {
 </script>
 
 <style scoped>
+.shadow {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 20px 6px -6px #999;
+    z-index: 10;
+    height: 650px;
+    width: 700px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-left: 350px;
+
+    padding: 10px;
+}
 </style>

@@ -24,7 +24,6 @@ class ProductsDataService {
     findByNombre(name) {
         return http.get(`/products?name=${name}`);
     }
-
 }
 
 export default new ProductsDataService  ();

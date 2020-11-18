@@ -82,6 +82,7 @@
 <style scoped>
 .login {
   padding: 2rem;
+  margin-left: 200px;
 }
 .title {
   text-align: center;

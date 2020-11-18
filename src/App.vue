@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <p>----</p>
     <!-- Navigation Bar -->
      <div id="bootstrap-overrides">
       <!-- Navigation Bar -->

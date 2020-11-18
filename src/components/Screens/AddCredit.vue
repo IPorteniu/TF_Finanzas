@@ -1,10 +1,9 @@
 <template>
   <!-- Current Tutorial is available -->
 
-  <div v-if="currentTutorial" class="edit-form container">
-    <p>'</p>
+  <div v-if="currentTutorial" class="edit-form container shadow">
     <div class="row">
-      <div class="col-sm-3 col-md-3 col-lg-3">
+      <div class="col-sm-6 col-md-6 col-lg-6">
         <h4>Detalles del Cliente:</h4>
         <form>
           <div class="form-group">
@@ -49,7 +48,7 @@
           </div>
         </form>
       </div>
-      <div class="col-sm-3 col-md-3 col-lg-3" v-if="!submitedCredit">
+      <div class="col-sm-6 col-md-6 col-lg-6" v-if="!submitedCredit">
         <h4>Crédito:</h4>
         <div class="form-group">
           <label for="amount">Monto de crédito otorgado</label>
@@ -93,7 +92,7 @@
           </li>
         </ul>
 
-        <button class="badge badge-success" @click="saveCredit">
+        <button class="badge badge-success differ" @click="saveCredit">
           Siguiente
         </button>
       </div>
@@ -293,5 +292,21 @@ export default {
   max-width: 1100px;
   margin: auto;
   margin-left: 60px;
+}
+.shadow {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 20px 6px -6px #999;
+    z-index: 1000;
+    height: 500px;
+    width: 700px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-left: 300px;
+
+    padding: 20px;
+}
+.differ{
+  margin-top: 20px;
 }
 </style>

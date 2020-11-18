@@ -20,6 +20,7 @@ class InvoicesDataService {
     delete(id) {
         return http.delete(`/invoices/${id}`);
     }
+    
     findByCreditId(credit_id) {
         return http.get(`/invoices?credit_id=${credit_id}`);
     }

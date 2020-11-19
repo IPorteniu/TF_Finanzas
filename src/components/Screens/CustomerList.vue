@@ -63,22 +63,24 @@
             <p id="cred">{{ currentCredit.id }}</p></label
           >
         </div>
-        <div v-if="currentCredit">
-          <label
-            ><strong>Crédito asignado: </strong>{{ currentCredit.amount }}</label
-          >
-        </div>
-        <div v-if="currentCredit">
-          <label
-            ><strong>Crédito utilizado: </strong>{{ invoice[0].charges }}</label
-          >
-        </div>
-        <div v-if="currentCredit">
-          <label
-            ><strong>Fecha de creación de crédito: </strong
-            >{{ currentCredit.created_in }}</label
-          >
-        </div>
+        <div class="shadow2" v-if="currentCredit">
+          <div v-if="currentCredit">
+            <label
+              ><strong>Crédito asignado: </strong>{{ currentCredit.amount }}</label
+            >
+          </div>
+          <div v-if="currentCredit">
+            <label
+              ><strong>Crédito utilizado: </strong>{{ invoice[0].charges }}</label
+            >
+          </div>
+          <div v-if="currentCredit">
+            <label
+              ><strong>Fecha de creación de crédito: </strong
+              >{{ currentCredit.created_in }}</label
+            >
+          </div>
+       </div>
         <a
           v-if="currentCredit == ''"
           class="badge badge-warning"
@@ -327,6 +329,18 @@ export default {
     background-color: rgb(255, 255, 255);
     margin-top: 30px;
     margin-left: 300px;
+
+    padding: 10px;
+}
+.shadow2 {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 5px 6px -2px #999;
+    z-index: 1000;
+    height: 130px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
 
     padding: 10px;
 }

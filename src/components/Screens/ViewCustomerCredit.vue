@@ -233,6 +233,9 @@
       <button v-if="customer" class="badge badge-success" @click="viewPayment">
         Proceder a pagar
       </button>
+      <button v-if="customer" class="badge badge-success differB" @click="printPage">
+        Imprimir reporte
+      </button>
     </div>
     <div></div>
   </div>
@@ -446,6 +449,9 @@ export default {
           console.log(e);
         });
     },
+    printPage(){
+      window.print();
+    },
   },
   mounted() {
     this.getCustomer(this.$route.params.customer_id);
@@ -475,5 +481,8 @@ export default {
   margin-left: 80px;
 
   padding: 20px;
+}
+.differB{
+  margin-left: 860px;
 }
 </style>

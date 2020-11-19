@@ -226,6 +226,13 @@ export default {
       var date1 = new Date(this.credit.created_in);
       var date2 = new Date(this.pay_day);
       var date3 = new Date(this.invoice.end_date);
+      console.log(date1);
+      console.log(date2);
+      console.log(date3);
+
+      console.log(this.credit.created_in);
+      console.log(this.pay_day);
+      console.log(this.invoice.end_date);
 
 
       // To calculate the time difference of two dates
@@ -285,7 +292,7 @@ export default {
         window.history.back();
     },
     PayPartOf(){
-        this.invoice.charges = this.total_add_on;
+        this.invoice.charges = parseFloat(this.total_add_on);
         this.invoice.charges = this.invoice.charges - parseFloat(this.amort);
         InvoiceDataService.update(this.invoice.id, this.invoice)
         .then((response) => {

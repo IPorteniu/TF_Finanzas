@@ -49,10 +49,10 @@
       </div>
     </div>
     <div class="differ">
-        <label><strong>Precio total de la orden:</strong>{{ order.total_price }}</label>
+        <label><strong>Precio total de la orden: </strong>{{ order.total_price }}</label>
     </div>
     <div>
-        <label><strong>Fecha de la compra:</strong>{{ order.date }}</label>
+        <label><strong>Fecha de la compra: </strong>{{ order.date }}</label>
     </div>
     <div>
         <button

@@ -6,6 +6,7 @@
         <input
           type="text"
           class="form-control"
+          id = "search_text"
           placeholder="Producto"
           v-model="name"
         />
@@ -13,6 +14,7 @@
           <button
             class="btn btn-outline-secondary"
             type="button"
+            id = "search"
             @click="searchTitle"
           >
             Search
@@ -41,10 +43,10 @@
       <div v-if="currentTutorial">
         <h4>Product Info</h4>
         <div>
-          <label><strong>Name:</strong>{{ currentTutorial.name }}</label>
+          <label><strong>Name: </strong>{{ currentTutorial.name }}</label>
         </div>
         <div>
-          <label><strong>Precio:</strong>{{ currentTutorial.price }}</label>
+          <label><strong>Precio: </strong>{{ currentTutorial.price }}</label>
         </div>
       </div>
       <div v-else>
@@ -54,26 +56,26 @@
       <div>
         <div v-if="currentCustomer">
           <label
-            ><strong>Cliente:</strong>{{ currentCustomer.first_name }}</label
+            ><strong>Cliente: </strong>{{ currentCustomer.first_name }}</label
           >
         </div>
         <div v-if="currentOrder">
-          <label><strong>Order:</strong>{{ currentOrder.id }}</label>
+          <label><strong>Order: </strong>{{ currentOrder.id }}</label>
         </div>
         <div v-if="currentOrder">
           <label
-            ><strong>Total a pagar por la orden:</strong
+            ><strong>Total a pagar por la orden: </strong
             >{{ currentOrder.total_price }}</label
           >
         </div>
         <div v-if="currentInvoice">
           <label
-            ><strong>Total cargado a la cuenta hasta la fecha:</strong
+            ><strong>Total cargado a la cuenta hasta la fecha: </strong
             >{{ currentInvoice.charges }}</label
           >
-          <p>Cantidad:</p>
+          <strong><p>Cantidad: </p></strong>
           <input
-            type="text"
+            type="number"
             class="form-control"
             id="quantity"
             v-model="quantity"
@@ -81,7 +83,7 @@
         </div>
         <button
           v-if="currentOrder"
-          class="badge badge-success"
+          class="badge badge-success differX"
           @click="AddOrder_Detail"
         >
           Añadir a la orden
@@ -314,6 +316,16 @@ export default {
     this.getOrder(this.$route.params.order_id);
     this.getInvoice(this.$route.params.invoice_id);
     this.getCredit(this.$route.params.id);
+    var input = document.getElementById("search_text");
+            input.addEventListener("keyup", function(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+              // Cancel the default action, if needed
+              event.preventDefault();
+              // Trigger the button element with a click
+              document.getElementById("search").click();
+            }
+          });
   },
 };
 </script>
@@ -339,5 +351,8 @@ export default {
     margin-left: 300px;
 
     padding: 10px;
+}
+.differX{
+  margin-top: 20px;
 }
 </style>

@@ -6,7 +6,7 @@
       <input class="form-input" type="text" id="ruc" required placeholder="email" v-model="email">
       <label class="form-label" for="#password">Password:</label>
       <input class="form-input" type="password" id="password" placeholder="Password" v-model="password">
-      <input class="form-submit" type="button" value="Login" @click="searchRuc()">
+      <input class="form-submit" type="button" id="login" value="Login" @click="searchRuc()">
       <p class="passMessage" v-if="this.status == 2">Error en contraseña o usuario</p>
     </form>
   </div>
@@ -75,6 +75,16 @@
         },
         mounted() {
             this.retrieveTutorials();
+            var input = document.getElementById("password");
+            input.addEventListener("keyup", function(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+              // Cancel the default action, if needed
+              event.preventDefault();
+              // Trigger the button element with a click
+              document.getElementById("login").click();
+            }
+          });
         }
     }
 </script>

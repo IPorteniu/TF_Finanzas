@@ -1,5 +1,8 @@
 <template>
   <div class="list row shadow">
+    <div>
+          <h4>Bienvenida Empresa: {{ owner.name }}</h4>
+        </div>
     <!-- Search Panel -->
     <div class="col-md-8 differS">
       <div class="input-group mb-3">
@@ -7,12 +10,14 @@
           type="text"
           class="form-control"
           placeholder="Buscar por nombre"
+          id = "search_text"
           v-model="first_name"
         />
         <div class="input-group-append">
           <button
             class="btn btn-outline-secondary"
             type="button"
+            id = "search"
             @click="searchCustomer"
           >
             Search
@@ -42,34 +47,35 @@
         <h4>Customer Info</h4>
         <div>
           <label
-            ><strong>Name:</strong
+            ><strong>Name: </strong
             >{{
               currentTutorial.first_name + " " + currentTutorial.last_name
             }}</label
           >
         </div>
         <div>
-          <label><strong>Email:</strong>{{ currentTutorial.email }}</label>
+          <label><strong>Email: </strong>{{ currentTutorial.email }}</label>
         </div>
-        <div>
-          <label
-            ><strong>Owner ID:</strong>{{ currentTutorial.owner_id }}</label
-          >
-        </div>
+       
         <div v-if="currentCredit">
           <label
-            ><strong>Credit ID:</strong>
+            ><strong>Número de cuenta del cliente: </strong>
             <p id="cred">{{ currentCredit.id }}</p></label
           >
         </div>
         <div v-if="currentCredit">
           <label
-            ><strong>Credit amount:</strong>{{ currentCredit.amount }}</label
+            ><strong>Crédito asignado: </strong>{{ currentCredit.amount }}</label
           >
         </div>
         <div v-if="currentCredit">
           <label
-            ><strong>Credit created_in:</strong
+            ><strong>Crédito utilizado: </strong>{{ invoice[0].charges }}</label
+          >
+        </div>
+        <div v-if="currentCredit">
+          <label
+            ><strong>Fecha de creación de crédito: </strong
             >{{ currentCredit.created_in }}</label
           >
         </div>
@@ -90,7 +96,7 @@
       </div>
       <div v-else>
         <br />
-        <p>Please click on a Subscriber.</p>
+        <p>Please click on a Customer.</p>
       </div>
     </div>
     <div class="differ">
@@ -109,6 +115,7 @@ import CustomerDataService from "@/services/CustomersDataService";
 import CreditDataService from "@/services/CreditsDataService";
 import InvoiceDataService from "@/services/InvoicesDataService";
 import OrderDataService from "@/services/OrdersDataService";
+import OwnerDataService from "@/services/OwnersDataService";
 
 export default {
   name: "CustomerList",
@@ -133,15 +140,42 @@ export default {
       invoices: [],
       currentInvoice: "",
 
+      invoice: {
+        id: null,
+        credit_id: "",
+        status_id: "",
+        charges: "",
+        start_date: "",
+        end_date: "",
+      },
+
       order: {
         id: null,
         invoice_id: "",
         date: "",
         total_price: 0,
       },
+
+      owner: {
+        id: null,
+        ruc: "",
+        name: "",
+        password: "",
+      },
     };
   },
   methods: {
+    getOwner(id){
+      OwnerDataService.get(id)
+        .then(response => {
+            this.owner = response.data;
+            console.log(response.data);
+        })
+        .catch(e => {
+            console.log(e);
+        });
+    },
+
     retrieveTutorials() {
       CustomerDataService.getAll()
         .then((response) => {
@@ -162,6 +196,14 @@ export default {
             if (this.credits[i]["customer_id"] == this.currentTutorial.id) {
               console.log(this.credits[i]["id"]);
               this.currentCredit = this.credits[i];
+              InvoiceDataService.findByCreditId(this.currentCredit["id"])
+              .then((response) => {
+                  this.invoice = response.data;
+                  console.log(this.invoice);
+              })
+              .catch((e) => {
+              console.log(e);
+              });
             }
           }
         })
@@ -248,9 +290,20 @@ export default {
     },
   },
   mounted() {
+    this.getOwner(this.$route.params.id);
     this.retrieveTutorials();
     this.searchTitle();
     this.GetCurrentDate();
+    var input = document.getElementById("search_text");
+            input.addEventListener("keyup", function(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+              // Cancel the default action, if needed
+              event.preventDefault();
+              // Trigger the button element with a click
+              document.getElementById("search").click();
+            }
+          });
   },
 };
 </script>
@@ -281,6 +334,6 @@ export default {
    margin-left: 10px;
 }
 .differS{
-   margin-bottom: -40px;
+   margin-bottom: -20px;
 }
 </style>

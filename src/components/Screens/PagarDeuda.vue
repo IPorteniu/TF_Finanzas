@@ -17,7 +17,7 @@
           <div class="form-group">
             <label for="pay_day">Ingresar fecha de pago: </label>
             <input
-              type="text"
+              type="date"
               class="form-control"
               id="pay_day"
               v-model="pay_day"

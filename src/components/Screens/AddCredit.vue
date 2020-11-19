@@ -53,7 +53,7 @@
         <div class="form-group">
           <label for="amount">Monto de crédito otorgado</label>
           <input
-            type="text"
+            type="number"
             class="form-control"
             id="amount"
             v-model="credit.amount"
@@ -72,7 +72,7 @@
         <div class="form-group">
           <label for="arrears">Monto por mora</label>
           <input
-            type="text"
+            type="number"
             class="form-control"
             id="arrears"
             v-model="credit.arrears"

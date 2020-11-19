@@ -345,17 +345,29 @@
       "address": "Av. veinte de mayo",
       "password": "contraseña",
       "id": 8
+    },
+    {
+      "owner_id": "2",
+      "email": "javier@gmail.com",
+      "first_name": "Javier",
+      "last_name": "Prado",
+      "phone": "342746546",
+      "address": "Av. seis de mayo",
+      "password": "contraseña",
+      "id": 9
     }
   ],
   "owners": [
     {
       "id": 1,
       "ruc": "99023467",
+      "name": "Menoss",
       "password": "123lala"
     },
     {
       "id": 2,
       "ruc": 123563,
+      "name": "Pambo",
       "password": "432lala"
     }
   ],
@@ -364,13 +376,13 @@
       "id": 1,
       "credit_id": 1,
       "status_id": 0,
-      "charges": 65,
+      "charges": 76,
       "start_date": "01-09-2020",
       "end_date": "01-30-2020"
     },
     {
       "id": 2,
-      "credit_id": 1,
+      "credit_id": 2,
       "status_id": 0,
       "charges": 35.5,
       "start_date": "01-01-2020",
@@ -379,7 +391,7 @@
     {
       "credit_id": 5,
       "status_id": 0,
-      "charges": 10,
+      "charges": 0,
       "start_date": "11-15-2020",
       "end_date": "11-30-2020",
       "id": 3
@@ -395,13 +407,13 @@
     {
       "credit_id": 7,
       "status_id": 0,
-      "charges": 29.9,
+      "charges": 89.3,
       "start_date": "11-17-2020",
       "end_date": "12-30-2020",
       "id": 5
     },
     {
-      "credit_id": 7,
+      "credit_id": 3,
       "status_id": 0,
       "charges": 0,
       "start_date": "11-17-2020",
@@ -522,6 +534,34 @@
       "quantity": 1,
       "price_detail": 29,
       "id": 9
+    },
+    {
+      "product_id": 1,
+      "order_id": 9,
+      "quantity": 1,
+      "price_detail": 11,
+      "id": 10
+    },
+    {
+      "product_id": 1,
+      "order_id": 10,
+      "quantity": 2,
+      "price_detail": 22,
+      "id": 11
+    },
+    {
+      "product_id": 2,
+      "order_id": 13,
+      "quantity": 1,
+      "price_detail": 7,
+      "id": 12
+    },
+    {
+      "product_id": 3,
+      "order_id": 14,
+      "quantity": 1,
+      "price_detail": 29,
+      "id": 13
     }
   ],
   "orders": [
@@ -572,6 +612,60 @@
       "date": "11-17-2020",
       "total_price": 0,
       "id": 8
+    },
+    {
+      "invoice_id": 1,
+      "date": "11-18-2020",
+      "total_price": 11,
+      "id": 9
+    },
+    {
+      "invoice_id": 5,
+      "date": "11-18-2020",
+      "total_price": 22,
+      "id": 10
+    },
+    {
+      "invoice_id": 4,
+      "date": "11-18-2020",
+      "total_price": 0,
+      "id": 11
+    },
+    {
+      "invoice_id": 5,
+      "date": "11-18-2020",
+      "total_price": 0,
+      "id": 12
+    },
+    {
+      "invoice_id": 5,
+      "date": "11-18-2020",
+      "total_price": 7.5,
+      "id": 13
+    },
+    {
+      "invoice_id": 5,
+      "date": "11-18-2020",
+      "total_price": 29.9,
+      "id": 14
+    },
+    {
+      "invoice_id": 5,
+      "date": "11-18-2020",
+      "total_price": 0,
+      "id": 15
+    },
+    {
+      "invoice_id": 6,
+      "date": "11-18-2020",
+      "total_price": 0,
+      "id": 16
+    },
+    {
+      "invoice_id": 2,
+      "date": "11-18-2020",
+      "total_price": 0,
+      "id": 17
     }
   ]
 }

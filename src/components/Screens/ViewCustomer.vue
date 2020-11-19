@@ -63,7 +63,6 @@
           <button
             v-if="customer"
             class="badge badge-success"
-            @click="viewCustomerCredit"
           >
             Ver mi crédito
           </button>
@@ -152,7 +151,7 @@ export default {
                 .then((response) => {
                   this.invoice = response.data;
                   console.log(this.invoice);
-                  document.location.href = `/customer-profile/${this.$route.params.id}/credit/${this.credit[0].id}/detail/${this.detail[0].id}/invoice/${this.invoice[0].id}`;
+                  window.location.href = `/customer-profile/${this.$route.params.id}/credit/${this.credit[0].id}/detail/${this.detail[0].id}/invoice/${this.invoice[0].id}`;
                 })
                 .catch((e) => {
                   console.log(e);
@@ -168,6 +167,7 @@ export default {
     },
   },
   mounted() {
+    this.viewCustomerCredit();
     this.getCustomer(this.$route.params.id);
   },
 };

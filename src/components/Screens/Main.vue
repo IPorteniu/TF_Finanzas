@@ -3,11 +3,9 @@
     <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-6 shadow" style="cursor: pointer;" onclick="window.location='/customer';">
         <h4 class="differ1">Soy Cliente</h4>
-        <img class="image" src="../../assets/consumidor.jpg">
       </div>
       <div class="col-sm-6 col-md-6 col-lg-6 shadow" style="cursor: pointer;" onclick="window.location='/owner';">
         <h4 class="differ2">Soy Dueño de empresa</h4>
-        <img class="image" src="../../assets/tienda.jpg">
       </div>
     </div>
   </div>
@@ -27,10 +25,10 @@
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 20px 6px -6px #999;
     z-index: 10;
-    height: 330px;
+    height: 130px;
     width: 250px;
     background:white;
-    margin-top: 20px;
+    margin-top: 100px;
     margin-left: 380px;
 
     padding: 10px;
@@ -42,10 +40,12 @@
 }
 .differ1{
     margin-left: 210px;
-    margin-top: 10px;
+    margin-top: 20px;
+    letter-spacing: 3px;
 }
 .differ2{
-    margin-left: 145px;
-    margin-top: 10px;
+    margin-left: 125px;
+    margin-top: 20px;
+    letter-spacing: 3px;
 }
 </style>

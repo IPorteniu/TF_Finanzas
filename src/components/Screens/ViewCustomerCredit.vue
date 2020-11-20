@@ -440,6 +440,7 @@ export default {
               this.invoice1 = response.data;
               console.log(response.data);
               this.credit_remain = this.credit1.amount - this.invoice1.charges;
+              this.credit_remain = Number(Math.round(this.credit_remain+'e2')+'e-2');        
             })
             .catch((e) => {
               console.log(e);

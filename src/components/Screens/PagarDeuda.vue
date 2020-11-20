@@ -104,6 +104,7 @@ import CreditDetailDataService from "@/services/CreditDetailsDataService";
 import InvoiceDataService from "@/services/InvoicesDataService";
 
 import TermDataService from "@/services/TermsDataService";
+import CurrencyDataService from "@/services/CurrenciesDataService";
 
 export default {
   name: "CreditPayment",
@@ -150,6 +151,11 @@ export default {
         name: "",
         time: "",
       },
+      currency:{
+        id: null,
+        name: "",
+        unit: "",
+      },
 
       //Calculation variables
       //Tasa Simple
@@ -187,6 +193,15 @@ export default {
         .then((response) => {
           this.credit = response.data;
           console.log(response.data);
+
+          CurrencyDataService.get(this.credit.currency_id)
+            .then((response) => {
+              this.currency = response.data;
+              console.log(response.data);
+            })
+            .catch((e) => {
+              console.log(e);
+            });
         })
         .catch((e) => {
           console.log(e);
@@ -240,13 +255,19 @@ export default {
 
       // To calculate the no. of days between two dates
       var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+      var Difference_In_Years = parseInt(Difference_In_Time / (1000 * 3600 * 24 * 360));
 
       //To display the final no. of days (result)
       console.log(Difference_In_Days);
       this.t = Difference_In_Days; //Se mantiene para todas las tasas
-      if(this.t > 360){
-          this.t = 360;
+      //funciona para hasta 7 años
+      var i;
+      for(i = 1; i <= Difference_In_Years; i++){
+        if(this.t > 360*i && this.t <= 365*i+1){
+          this.t = 360*i;
+        }
       }
+      console.log(this.t);
 
       //Calculo de tasas
       //rate_id 1 = simple; rate_id 2 = Efectiva; rate_id 3 = Nominal;
@@ -281,6 +302,7 @@ export default {
       this.total_add_on = Number(Math.round(this.total_add_on+'e2')+'e-2');
     },
     PayAll(){
+        alert("Su pago de " + this.invoice.charges + " fue realizado con éxito")
         this.invoice.charges = 0;
         InvoiceDataService.update(this.invoice.id, this.invoice)
         .then((response) => {
@@ -292,6 +314,7 @@ export default {
         window.history.back();
     },
     PayPartOf(){
+        alert("Su pago de " + this.amort + " " + this.currency.unit + " fue realizado con éxito")
         this.invoice.charges = parseFloat(this.total_add_on);
         this.invoice.charges = this.invoice.charges - parseFloat(this.amort);
         InvoiceDataService.update(this.invoice.id, this.invoice)

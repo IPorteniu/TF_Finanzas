@@ -40,7 +40,7 @@
             <ul
               class="list-group"
               v-if="
-                currentRate.name == 'Efectiva' || currentRate.name == 'Nominal'
+                currentRate.name == 'Nominal'
               "
             >
               <p>Capitalización</p>

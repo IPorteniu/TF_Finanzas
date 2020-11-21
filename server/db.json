@@ -1,214 +1,228 @@
 {
-  "subscribers": [
+  "credits": [
     {
-      "id": 1,
-      "firstName": "Rubena",
-      "lastName": "Ayala",
-      "age": 23,
-      "programId": 1
-    },
-    {
-      "id": 2,
-      "firstName": "Jim",
-      "lastName": "Parson",
-      "age": 18,
-      "programId": 2
-    },
-    {
-      "id": 3,
-      "firstName": "Liu",
-      "lastName": "Quan",
-      "age": 37,
-      "programId": 4
-    },
-    {
-      "id": 4,
-      "firstName": "Stella",
-      "lastName": "Jimenez",
-      "age": 45,
-      "programId": 2
-    },
-    {
-      "id": 5,
-      "firstName": "Fred",
-      "lastName": "Stars",
-      "age": 12,
-      "programId": 5
-    },
-    {
-      "id": 6,
-      "firstName": "Migue",
-      "lastName": "Migue",
-      "age": "32",
-      "programId": "2",
-      "published": true
-    },
-    {
-      "firstName": "Liu",
-      "lastName": "Kang",
-      "age": "18",
-      "id": 7,
-      "programId": "4",
-      "published": false
-    },
-    {
-      "firstName": "Kung ",
-      "lastName": "Lao",
-      "age": "25",
-      "id": 8
-    },
-    {
-      "firstName": "Fabrizio",
-      "lastName": "Castellano",
-      "age": "12",
-      "id": 9,
-      "programId": "54",
-      "published": true
-    },
-    {
-      "firstName": "Mario",
-      "lastName": "Luigi",
-      "age": "69",
-      "id": 10
-    },
-    {
-      "firstName": "Luis",
-      "lastName": "Ordoñez",
-      "age": "19",
-      "id": 11
-    },
-    {
-      "firstName": "Dylan",
-      "lastName": "Shinoda",
-      "age": "19",
-      "id": 12
-    }
-  ],
-  "credits":[
-    {
-      "id": 1,
       "customer_id": 1,
       "currency_id": 1,
-      "active": 1,
-      "amount": 100.00,
-      "created_in": "09-26-2020",
-      "arrears" : 0.05
+      "active": 0,
+      "amount": 300,
+      "created_in": "11-21-2020",
+      "arrears": 7,
+      "id": 1
     },
     {
-      "id": 2,
       "customer_id": 2,
-      "currency_id": 2,
+      "currency_id": 1,
       "active": 0,
-      "amount": 100.00,
-      "created_in": "06-15-2020",
-      "arrears" : 1.05
+      "amount": 300,
+      "created_in": "11-21-2020",
+      "arrears": 15,
+      "id": 2
+    },
+    {
+      "customer_id": 4,
+      "currency_id": 1,
+      "active": 0,
+      "amount": 300,
+      "created_in": "11-21-2020",
+      "arrears": 15,
+      "id": 3
+    },
+    {
+      "customer_id": 5,
+      "currency_id": 1,
+      "active": 0,
+      "amount": 300,
+      "created_in": "11-21-2020",
+      "arrears": 20,
+      "id": 4
     }
   ],
   "credit_details": [
     {
+      "credit_id": 1,
+      "maintenance": 6,
+      "percentage": 13,
+      "rate_id": 1,
+      "term_id": 3,
+      "capitalization": null,
+      "id": 1
+    },
+    {
+      "credit_id": 2,
+      "maintenance": 5,
+      "percentage": 13,
+      "rate_id": 3,
+      "term_id": 3,
+      "capitalization": {
+        "id": 4,
+        "name": "Diaria",
+        "time": 1
+      },
+      "id": 2
+    },
+    {
+      "credit_id": 3,
+      "maintenance": 5,
+      "percentage": 13,
+      "rate_id": 1,
+      "term_id": 3,
+      "capitalization": null,
+      "id": 3
+    },
+    {
+      "credit_id": 4,
+      "maintenance": 5,
+      "percentage": 15,
+      "rate_id": 1,
+      "term_id": 3,
+      "capitalization": null,
+      "id": 4
+    }
+  ],
+  "rates": [
+    {
       "id": 1,
-      "credit_id" : 1,
-      "maintenance": 5.00,
-      "maintenance_date" : "7",
-      "percentage": 0.10,
-      "rate_term_id" : 1.40
+      "name": "Simple"
     },
     {
       "id": 2,
-      "credit_id" : 2,
-      "maintenance": 8.75,
-      "maintenance_date" : "14",
-      "percentage": 0.035,
-      "rate_term_id" : 1.40
-    }
-  ],
-  "rate_terms" : [
+      "name": "Efectiva"
+    },
     {
-      "id" : 1,
-      "rate_id" : 1,
-      "term_id" : 1
+      "id": 3,
+      "name": "Nominal"
     }
   ],
-  "rates" : [
+  "terms": [
     {
       "id": 1,
-      "name": "Efectiva Semestral",
-      "rate_day": 180
+      "name": "Trimestral",
+      "time": 90
     },
     {
       "id": 2,
-      "name": "Efectiva Trimestral",
-      "rate_day": 90
-    }
-  ],
-  "terms" : [
+      "name": "Semestral",
+      "time": 180
+    },
     {
-    "id": 1,
-    "name": "blablabla",
-    "time": 1.20
+      "id": 3,
+      "name": "Anual",
+      "time": 360
+    },
+    {
+      "id": 4,
+      "name": "Diaria",
+      "time": 1
     }
   ],
   "customers": [
     {
-      "id": 3,
-      "owner_id": 1,
-      "email": "lporteniu@gmail.com",
-      "first_name": "Luis",
-      "last_name": "Ordonez",
-      "phone": 940400876,
-      "address": "jiron dona pepa",
-      "password": "un elefante se balanceba"
-     },
-    {
-      "id": 1,
-      "owner_id": 1,
-      "email": "customer1@gmail.com",
-      "first_name": "Pedro",
-      "last_name": "Rodriguez",
-      "phone": 940567123,
-      "address": "Schell Street",
-      "password": "1234La02"
+      "owner_id": "1",
+      "email": "dylanshinoda6969@gmail.com",
+      "first_name": "Dylan",
+      "last_name": "Shinoda",
+      "phone": "940691245",
+      "address": "Calle la paz 545",
+      "password": "contraseña",
+      "id": 1
     },
     {
-      "id": 2,
-      "owner_id": 1,
-      "email": "dylandonayre@gmail.com",
-      "first_name": "Dylan",
-      "last_name": "Donayre",
-      "phone": 934123765,
-      "address": "Chiclayo Street",
-      "password": "4321Lo0"
+      "owner_id": "1",
+      "email": "josedelgado@hotmail.com",
+      "first_name": "José",
+      "last_name": "Delgado",
+      "phone": "940123543",
+      "address": "Calle Alcanfores 465",
+      "password": "contraseña",
+      "id": 2
+    },
+    {
+      "owner_id": "1",
+      "email": "sofiashinoda@hotmail.com",
+      "first_name": "Sofía",
+      "last_name": "Shinoda",
+      "phone": "940123876",
+      "address": "Av Pardo 644",
+      "password": "contraseña",
+      "id": 3
+    },
+    {
+      "owner_id": "2",
+      "email": "luisshinoda@gmail.com",
+      "first_name": "Luis",
+      "last_name": "Shinoda",
+      "phone": "940400876",
+      "address": "schell 630",
+      "password": "contraseña",
+      "id": 4
+    },
+    {
+      "owner_id": "2",
+      "email": "felipeshinoda@gmail.com",
+      "first_name": "Felipe",
+      "last_name": "Shinoda",
+      "phone": "940120300",
+      "address": "Chiclayo york",
+      "password": "contraseña",
+      "id": 5
+    },
+    {
+      "owner_id": "2",
+      "email": "cristanlautero@gmail.com",
+      "first_name": "Cristian",
+      "last_name": "Lautero",
+      "phone": "920233543",
+      "address": "Surquillo 2 de mayo 343",
+      "password": "contraseña",
+      "id": 6
     }
-
   ],
   "owners": [
     {
       "id": 1,
-      "dni": "99023467",
+      "ruc": "10123456789",
+      "name": "Menoss",
       "password": "123lala"
     },
     {
       "id": 2,
-      "dni": 123563,
+      "ruc": 10987654321,
+      "name": "Pambo",
       "password": "432lala"
     }
   ],
   "invoices": [
     {
-      "id": 1,
       "credit_id": 1,
       "status_id": 0,
-      "charges": 54.00,
-      "start_date": "09-01-2020",
-      "end_date": "2020-05-04"
+      "charges": 0,
+      "start_date": "11-21-2020",
+      "end_date": "12-30-2020",
+      "id": 1
     },
     {
-      "id": 2,
-      "credit_id": 1,
+      "credit_id": 2,
       "status_id": 0,
-      "charges": 35.50,
-      "start_date": "01-01-2020",
-      "end_date": "01-30-2020"
+      "charges": 0,
+      "start_date": "11-21-2020",
+      "end_date": "12-30-2020",
+      "id": 2
+    },
+    {
+      "credit_id": 3,
+      "status_id": 0,
+      "charges": 99.69,
+      "start_date": "11-21-2020",
+      "end_date": "12-30-2020",
+      "id": 3
+    },
+    {
+      "credit_id": 4,
+      "status_id": 0,
+      "charges": 16.2,
+      "start_date": "11-21-2020",
+      "end_date": "12-30-2020",
+      "id": 4
     }
   ],
   "status": [
@@ -225,56 +239,96 @@
     {
       "id": 1,
       "name": "sol peruano",
-      "unit": "sol"
+      "unit": "PEN"
     },
     {
       "id": 2,
       "name": "dolar estadounidense",
-      "unit": "usd"
+      "unit": "USD"
     }
-
   ],
   "products": [
     {
       "id": 1,
       "currency_id": 1,
-      "price": 10.00,
+      "price": "11",
       "name": "Shampoo"
     },
     {
       "id": 2,
       "currency_id": 1,
-      "price": 7.50,
-      "name": "Foco"
+      "price": 7.5,
+      "name": "Pan bimbo"
+    },
+    {
+      "name": "Salchichas enlatadas",
+      "price": 8.7,
+      "currencyId": 1,
+      "id": 3
+    },
+    {
+      "name": "Delivery",
+      "price": 4.99,
+      "currencyId": 1,
+      "id": 4
     }
   ],
   "order_details": [
     {
-      "product_id": 1,
-      "order_id": 1,
-      "quantity": 2
-    },
-    {
       "product_id": 2,
       "order_id": 1,
-      "quantity": 2
+      "quantity": 1,
+      "price_detail": 7,
+      "id": 1
+    },
+    {
+      "product_id": 3,
+      "order_id": 1,
+      "quantity": 1,
+      "price_detail": 8,
+      "id": 2
     },
     {
       "product_id": 2,
       "order_id": 2,
-      "quantity": 5
+      "quantity": 10,
+      "price_detail": 75,
+      "id": 3
+    },
+    {
+      "product_id": 1,
+      "order_id": 2,
+      "quantity": 1,
+      "price_detail": 11,
+      "id": 4
+    },
+    {
+      "product_id": 3,
+      "order_id": 2,
+      "quantity": 1,
+      "price_detail": 8,
+      "id": 5
+    },
+    {
+      "product_id": 4,
+      "order_id": 2,
+      "quantity": 1,
+      "price_detail": 4,
+      "id": 6
     }
   ],
   "orders": [
     {
-      "id": 1,
-      "invoice_id": 1,
-      "date": "09-26-2020"
+      "invoice_id": 4,
+      "date": "11-21-2020",
+      "total_price": 16.2,
+      "id": 1
     },
     {
-      "id": 2,
-      "invoice_id": 2,
-      "date": "06-15-2020"
+      "invoice_id": 3,
+      "date": "11-21-2020",
+      "total_price": 99.69,
+      "id": 2
     }
   ]
 }

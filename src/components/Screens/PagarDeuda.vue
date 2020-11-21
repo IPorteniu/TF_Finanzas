@@ -119,6 +119,7 @@ export default {
         phone: "",
         address: "",
         password: "",
+        activation: "",
       },
       credit: {
         id: null,
@@ -292,9 +293,9 @@ export default {
             }
         }
       }
-      this.add_on = this.detail.maintenance;
+      this.add_on = this.detail.maintenance + this.customer.activation;
       if(date2 > date3){
-          this.add_on = this.credit.arrears + this.detail.maintenance;
+          this.add_on = this.credit.arrears + this.detail.maintenance + this.customer.activation;
       }
       this.total_add_on = this.total_charged + this.add_on;
       this.interes = Number(Math.round(this.interes+'e4')+'e-4');
@@ -303,6 +304,14 @@ export default {
     },
     PayAll(){
         alert("Su pago de " + this.invoice.charges + " fue realizado con éxito")
+        this.customer.activation = 0;
+        CustomerDataService.update(this.customer.id, this.customer)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
         this.invoice.charges = 0;
         InvoiceDataService.update(this.invoice.id, this.invoice)
         .then((response) => {
@@ -311,10 +320,28 @@ export default {
         .catch((e) => {
           console.log(e);
         });
+        console.log(this.customer.activation);
+        CustomerDataService.update(this.customer.id, this.customer)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+        alert("volviendo al inicio");
+
         window.history.back();
     },
     PayPartOf(){
         alert("Su pago de " + this.amort + " " + this.currency.unit + " fue realizado con éxito")
+        this.customer.activation = 0;
+        CustomerDataService.update(this.customer.id, this.customer)
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
         this.invoice.charges = parseFloat(this.total_add_on);
         this.invoice.charges = this.invoice.charges - parseFloat(this.amort);
         InvoiceDataService.update(this.invoice.id, this.invoice)
@@ -324,6 +351,8 @@ export default {
         .catch((e) => {
           console.log(e);
         });
+        alert("volviendo al inicio");
+
         window.history.back();
     },
   },

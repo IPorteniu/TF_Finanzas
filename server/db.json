@@ -124,6 +124,7 @@
       "phone": "940691245",
       "address": "Calle la paz 545",
       "password": "contraseña",
+      "activation": 10,
       "id": 1
     },
     {
@@ -134,6 +135,7 @@
       "phone": "940123543",
       "address": "Calle Alcanfores 465",
       "password": "contraseña",
+      "activation": 10,
       "id": 2
     },
     {
@@ -144,6 +146,7 @@
       "phone": "940123876",
       "address": "Av Pardo 644",
       "password": "contraseña",
+      "activation": 10,
       "id": 3
     },
     {
@@ -154,6 +157,7 @@
       "phone": "940400876",
       "address": "schell 630",
       "password": "contraseña",
+      "activation": 10,
       "id": 4
     },
     {
@@ -164,6 +168,7 @@
       "phone": "940120300",
       "address": "Chiclayo york",
       "password": "contraseña",
+      "activation": 10,
       "id": 5
     },
     {
@@ -174,6 +179,7 @@
       "phone": "920233543",
       "address": "Surquillo 2 de mayo 343",
       "password": "contraseña",
+      "activation": 10,
       "id": 6
     }
   ],

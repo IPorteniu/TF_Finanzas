@@ -191,6 +191,16 @@
               readonly
             />
           </div>
+          <div class="form-group">
+            <label for="activation">Costo por activación</label>
+            <input
+              type="text"
+              class="form-control"
+              id="maintenance"
+              v-model="customer.activation"
+              readonly
+            />
+          </div>
         </form>
       </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
@@ -266,6 +276,7 @@ export default {
         phone: "",
         address: "",
         password: "",
+        activation: "",
       },
       credit: {
         id: null,

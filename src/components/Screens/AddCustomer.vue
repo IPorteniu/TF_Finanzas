@@ -97,6 +97,7 @@ export default {
         phone: "",
         address: "",
         password: "",
+        activation: 10,
       },
       submitted: false,
     };
@@ -111,6 +112,7 @@ export default {
         phone: this.tutorial.phone,
         address: this.tutorial.address,
         password: this.tutorial.password,
+        activation: 10,
       };
 
       CustomerDataService.create(data)

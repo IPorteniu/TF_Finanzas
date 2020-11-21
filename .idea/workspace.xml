@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="280dadd3-0042-4594-a99e-f044beeb8064" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Sales/AddOrder.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Sales/Order.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Sales/OrdersList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Screens/AddSale.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Screens/AddSale.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

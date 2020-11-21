@@ -2,23 +2,23 @@ import http from "../http-common";
 
 class CurrenciesDataService {
     getAll() {
-        return http.get("/status");
+        return http.get("/currencies");
     }
 
     get(id) {
-        return http.get(`/status/${id}`);
+        return http.get(`/currencies/${id}`);
     }
 
     create(data) {
-        return http.post("/status", data);
+        return http.post("/currencies", data);
     }
 
     update(id, data) {
-        return http.put(`/status/${id}`, data);
+        return http.put(`/currencies/${id}`, data);
     }
 
     delete(id) {
-        return http.delete(`/status/${id}`);
+        return http.delete(`/currencies/${id}`);
     }
 
 }

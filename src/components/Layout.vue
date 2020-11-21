@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <!-- Navigation Bar -->
-     <div id="bootstrap-overrides">
+    <div id="bootstrap-overrides">
       <!-- Navigation Bar -->
       <nav class="navbar mynav">
           <div class="logo">
@@ -9,7 +8,10 @@
           </div>
           <ul class="nav-links">
               <li>
-                  <a href="/">Inicio</a>
+                  <a href="/subscribers">Inicio</a>
+              </li>
+              <li>
+                  <a href="/register">Register</a>
               </li>
               
           </ul>
@@ -19,22 +21,22 @@
               <div class="line3"></div>
           </div>
       </nav> 
-
-    <section class="zoom">
-        <p>-</p>
+      
+      <section class="zoom">
         <!-- Router View -->
         <div class="container mt-3">
           <router-view/>
         </div>
       </section>
-     </div>
+
+    </div>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'App',
+  name: 'Layout',
   components: { },
   methods: {
     navSlide() {
@@ -157,6 +159,8 @@ p {
    }
 
 }
+
+
 
     body {
         overflow-x: hidden;

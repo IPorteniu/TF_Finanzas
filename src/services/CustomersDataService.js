@@ -23,6 +23,14 @@ class CustomersDataService {
     findByOwnerId(owner_id) {
         return http.get(`/customers?owner_id=${owner_id}`);
     }
+
+    findByFirstName(first_name) {
+        return http.get(`/customers?first_name=${first_name}`);
+    }
+
+    findByEmail(email) {
+        return http.get(`/customers?email=${email}`);
+    }
 }
 
 export default new CustomersDataService();

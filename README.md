@@ -1,4 +1,7 @@
-# tutorials-client
+# Finanzas App
+
+Proyecto final del curso de finanzas,
+aplicacion para el manejo de flujo de caja.
 
 ## Project setup
 ```

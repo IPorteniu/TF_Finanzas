@@ -106,7 +106,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="arrears"></label>
+            <label for="arrears">Periodo</label>
             <input
               type="text"
               class="form-control"

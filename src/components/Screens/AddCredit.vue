@@ -81,7 +81,7 @@
 
         <ul class="list-group">
           <li
-            style="background-color: #fcfcfc"
+            style="background-color: orange"
             class="list-group-item"
             :class="{ active: index === currentIndexCurrency }"
             v-for="(currency, index) in currencies"

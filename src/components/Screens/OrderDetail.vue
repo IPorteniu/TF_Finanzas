@@ -62,8 +62,13 @@
         >
           Finalizar
         </button>
-    </div>
   </div>
+     <div>
+        <button class="badge badge-success differB" @click="printPage">
+           Imprimir reporte
+        </button>
+     </div>
+     </div>
 </div>
 </template>
 <script>
@@ -115,6 +120,9 @@ export default {
           console.log(e);
         });
     },
+     printPage(){
+        window.print();
+     },
     retrieveDetails(order) {
       OrderDetailDataService.findByOrderId(order)
         .then((response) => {

@@ -1,279 +1,56 @@
 {
-  "subscribers": [
-    {
-      "id": 2,
-      "firstName": "Jim",
-      "lastName": "Parson",
-      "age": 18,
-      "programId": 2
-    },
-    {
-      "id": 3,
-      "firstName": "Liu",
-      "lastName": "Quan",
-      "age": 37,
-      "programId": 4
-    },
-    {
-      "id": 4,
-      "firstName": "Stella",
-      "lastName": "Jimenez",
-      "age": 45,
-      "programId": 2
-    },
-    {
-      "id": 5,
-      "firstName": "Fred",
-      "lastName": "Stars",
-      "age": 12,
-      "programId": 5
-    },
-    {
-      "id": 6,
-      "firstName": "Migue",
-      "lastName": "Migue",
-      "age": "32",
-      "programId": "2",
-      "published": true
-    },
-    {
-      "firstName": "Liu",
-      "lastName": "Kang",
-      "age": "18",
-      "id": 7,
-      "programId": "4",
-      "published": false
-    },
-    {
-      "firstName": "Kung ",
-      "lastName": "Lao",
-      "age": "25",
-      "id": 8
-    },
-    {
-      "firstName": "Fabrizio",
-      "lastName": "Castellano",
-      "age": "12",
-      "id": 9,
-      "programId": "54",
-      "published": true
-    },
-    {
-      "firstName": "Mario",
-      "lastName": "Luigi",
-      "age": "69",
-      "id": 10
-    },
-    {
-      "firstName": "Luis",
-      "lastName": "Ordoñez",
-      "age": "19",
-      "id": 11
-    },
-    {
-      "firstName": "Dylan",
-      "lastName": "Shinoda",
-      "age": "19",
-      "id": 12
-    },
-    {
-      "firstName": "Jose",
-      "lastName": "Armando",
-      "age": "19",
-      "id": 13
-    }
-  ],
   "credits": [
     {
-      "id": 1,
       "customer_id": 1,
-      "currency_id": 2,
-      "active": 1,
-      "amount": 160,
-      "created_in": "01-09-2020",
-      "arrears": 1.05
+      "currency_id": 1,
+      "active": 0,
+      "amount": 300,
+      "created_in": "11-21-2020",
+      "arrears": 7,
+      "id": 1
     },
     {
-      "id": 2,
       "customer_id": 2,
-      "currency_id": 2,
-      "active": 1,
-      "amount": 90,
-      "created_in": "01-09-2020",
-      "arrears": 1.05
-    },
-    {
-      "id": 3,
-      "customer_id": 5,
-      "currency_id": 2,
-      "active": 1,
-      "amount": 100,
-      "created_in": "01-09-2020",
-      "arrears": 1.05
-    },
-    {
-      "id": 4,
-      "customer_id": 3,
-      "currency_id": 2,
-      "active": 1,
-      "amount": 100,
-      "created_in": "01-09-2020",
-      "arrears": 1.05
+      "currency_id": 1,
+      "active": 0,
+      "amount": 300,
+      "created_in": "11-21-2020",
+      "arrears": 15,
+      "id": 2
     },
     {
       "customer_id": 4,
       "currency_id": 1,
       "active": 0,
-      "amount": 500,
-      "created_in": "11-15-2020",
-      "arrears": 10,
-      "id": 5
+      "amount": 300,
+      "created_in": "11-21-2020",
+      "arrears": 15,
+      "id": 3
     },
     {
-      "customer_id": 6,
+      "customer_id": 5,
       "currency_id": 1,
       "active": 0,
-      "amount": 100,
-      "created_in": "11-15-2020",
-      "arrears": 13,
-      "id": 6
-    },
-    {
-      "customer_id": 7,
-      "currency_id": 2,
-      "active": 0,
-      "amount": 100,
-      "created_in": "11-17-2020",
-      "arrears": 12,
-      "id": 7
-    },
-    {
-      "customer_id": 8,
-      "currency_id": 1,
-      "active": 0,
-      "amount": 150,
-      "created_in": "11-17-2020",
-      "arrears": 10,
-      "id": 8
-    },
-    {
-      "customer_id": 9,
-      "currency_id": 2,
-      "active": 0,
-      "amount": 100,
-      "created_in": "11-19-2020",
-      "arrears": 10,
-      "id": 9
-    },
-    {
-      "customer_id": 10,
-      "currency_id": 1,
-      "active": 0,
-      "amount": 500,
-      "created_in": "11-19-2020",
-      "arrears": 10,
-      "id": 10
-    },
-    {
-      "customer_id": 11,
-      "currency_id": 1,
-      "active": 0,
-      "amount": 500,
-      "created_in": "11-19-2020",
-      "arrears": 10,
-      "id": 11
-    },
-    {
-      "customer_id": 13,
-      "currency_id": 1,
-      "active": 0,
-      "amount": 135,
-      "created_in": "11-19-2020",
-      "arrears": 7,
-      "id": 12
+      "amount": 300,
+      "created_in": "11-21-2020",
+      "arrears": 20,
+      "id": 4
     }
   ],
   "credit_details": [
     {
-      "id": 1,
       "credit_id": 1,
-      "maintenance": 5,
-      "percentage": 9,
+      "maintenance": 6,
+      "percentage": 13,
       "rate_id": 1,
       "term_id": 3,
-      "capitalization": null
+      "capitalization": null,
+      "id": 1
     },
     {
-      "id": 2,
       "credit_id": 2,
-      "maintenance": 8.75,
-      "percentage": 10,
-      "rate_id": 1,
-      "term_id": 3,
-      "capitalization": null
-    },
-    {
-      "credit_id": 5,
-      "maintenance": 11,
-      "percentage": 5,
-      "rate_id": 2,
-      "term_id": 3,
-      "capitalization": null,
-      "id": 3
-    },
-    {
-      "credit_id": 6,
-      "maintenance": 20,
-      "percentage": 3,
-      "rate_id": 3,
-      "term_id": 3,
-      "capitalization": {
-        "id": 4,
-        "name": "Semestral",
-        "time": 180
-      },
-      "id": 4
-    },
-    {
-      "credit_id": 7,
-      "maintenance": 14,
-      "percentage": 7,
-      "rate_id": 2,
-      "term_id": 3,
-      "capitalization": null,
-      "id": 5
-    },
-    {
-      "credit_id": 8,
-      "maintenance": 11,
-      "percentage": 14,
-      "rate_id": 2,
-      "term_id": 3,
-      "capitalization": null,
-      "id": 6
-    },
-    {
-      "credit_id": 9,
-      "maintenance": 7,
-      "percentage": 14,
-      "rate_id": 1,
-      "term_id": 3,
-      "capitalization": null,
-      "id": 7
-    },
-    {
-      "credit_id": 10,
-      "maintenance": 11,
-      "percentage": 3,
-      "rate_id": 2,
-      "term_id": 1,
-      "capitalization": null,
-      "id": 8
-    },
-    {
-      "credit_id": 11,
-      "maintenance": 11,
-      "percentage": 14,
+      "maintenance": 5,
+      "percentage": 13,
       "rate_id": 3,
       "term_id": 3,
       "capitalization": {
@@ -281,16 +58,25 @@
         "name": "Diaria",
         "time": 1
       },
-      "id": 9
+      "id": 2
     },
     {
-      "credit_id": 12,
-      "maintenance": 7,
-      "percentage": 7,
-      "rate_id": 2,
+      "credit_id": 3,
+      "maintenance": 5,
+      "percentage": 13,
+      "rate_id": 1,
       "term_id": 3,
       "capitalization": null,
-      "id": 10
+      "id": 3
+    },
+    {
+      "credit_id": 4,
+      "maintenance": 5,
+      "percentage": 15,
+      "rate_id": 1,
+      "term_id": 3,
+      "capitalization": null,
+      "id": 4
     }
   ],
   "rates": [
@@ -331,238 +117,112 @@
   ],
   "customers": [
     {
-      "id": 1,
-      "owner_id": 2,
-      "email": "customer1@gmail.com",
-      "first_name": "Pedro",
-      "last_name": "Rodriguez",
-      "phone": 940567123,
-      "address": "Schell Street",
-      "password": "1234La02"
-    },
-    {
-      "id": 2,
-      "owner_id": 1,
-      "email": "dylandonayre@gmail.com",
+      "owner_id": "1",
+      "email": "dylanshinoda6969@gmail.com",
       "first_name": "Dylan",
-      "last_name": "Donayre",
-      "phone": 934123765,
-      "address": "Chiclayo Street",
-      "password": "4321Lo0"
-    },
-    {
-      "id": 3,
-      "owner_id": 1,
-      "email": "lporteniu@gmail.com",
-      "first_name": "Luis",
-      "last_name": "Ordonez",
-      "phone": 940400876,
-      "address": "jiron dona pepa",
-      "password": "trabajo"
+      "last_name": "Shinoda",
+      "phone": "940691245",
+      "address": "Calle la paz 545",
+      "password": "contraseña",
+      "id": 1
     },
     {
       "owner_id": "1",
-      "email": "sofia@gmail.com",
-      "first_name": "Sofia ",
-      "last_name": "Bravo",
-      "phone": 987654322,
-      "address": "Av. Dos de mayo",
+      "email": "josedelgado@hotmail.com",
+      "first_name": "José",
+      "last_name": "Delgado",
+      "phone": "940123543",
+      "address": "Calle Alcanfores 465",
+      "password": "contraseña",
+      "id": 2
+    },
+    {
+      "owner_id": "1",
+      "email": "sofiashinoda@hotmail.com",
+      "first_name": "Sofía",
+      "last_name": "Shinoda",
+      "phone": "940123876",
+      "address": "Av Pardo 644",
+      "password": "contraseña",
+      "id": 3
+    },
+    {
+      "owner_id": "2",
+      "email": "luisshinoda@gmail.com",
+      "first_name": "Luis",
+      "last_name": "Shinoda",
+      "phone": "940400876",
+      "address": "schell 630",
       "password": "contraseña",
       "id": 4
     },
     {
       "owner_id": "2",
-      "email": "shino@gmail.com",
-      "first_name": "Keiji",
+      "email": "felipeshinoda@gmail.com",
+      "first_name": "Felipe",
       "last_name": "Shinoda",
-      "phone": "987153635",
-      "address": "Av. Tres de Mayo",
+      "phone": "940120300",
+      "address": "Chiclayo york",
       "password": "contraseña",
       "id": 5
     },
     {
       "owner_id": "2",
-      "email": "jose@gmail.com",
-      "first_name": "Jose",
-      "last_name": "Donyare",
-      "phone": "987654321",
-      "address": "Av. Cuatro de mayo",
-      "password": "joselala",
+      "email": "cristanlautero@gmail.com",
+      "first_name": "Cristian",
+      "last_name": "Lautero",
+      "phone": "920233543",
+      "address": "Surquillo 2 de mayo 343",
+      "password": "contraseña",
       "id": 6
-    },
-    {
-      "owner_id": "2",
-      "email": "jacobo@gmail.com",
-      "first_name": "Jacobo",
-      "last_name": "Osorio",
-      "phone": "986472738",
-      "address": "Av. Cinco de Mayo",
-      "password": "contraseña",
-      "id": 7
-    },
-    {
-      "owner_id": "1",
-      "email": "pablo@gmail.com",
-      "first_name": "Pablo",
-      "last_name": "Romero",
-      "phone": "985248326",
-      "address": "Av. veinte de mayo",
-      "password": "contraseña",
-      "id": 8
-    },
-    {
-      "owner_id": "2",
-      "email": "javier@gmail.com",
-      "first_name": "Javier",
-      "last_name": "Prado",
-      "phone": "342746546",
-      "address": "Av. seis de mayo",
-      "password": "contraseña",
-      "id": 9
-    },
-    {
-      "owner_id": "1",
-      "email": "diego@gmail.com",
-      "first_name": "Diego",
-      "last_name": "Flores",
-      "phone": "867146112",
-      "address": "Av. veinte de mayo",
-      "password": "contraseña",
-      "id": 10
-    },
-    {
-      "owner_id": "2",
-      "email": "pepe@gmail.com",
-      "first_name": "Pepe",
-      "last_name": "Juan",
-      "phone": "172842131",
-      "address": "Av. hola",
-      "password": "contra",
-      "id": 11
-    },
-    {
-      "owner_id": "2",
-      "email": "neruda@gmail.com",
-      "first_name": "Pablo",
-      "last_name": "Neruda",
-      "phone": "791247362",
-      "address": "Calle Schell",
-      "password": "contraseña",
-      "id": 12
-    },
-    {
-      "owner_id": "1",
-      "email": "koo@gmail.com",
-      "first_name": "María",
-      "last_name": "Koo",
-      "phone": "123456789",
-      "address": "Av. lima 123",
-      "password": "contraseña",
-      "id": 13
     }
   ],
   "owners": [
     {
       "id": 1,
-      "ruc": "99023467",
+      "ruc": "10123456789",
       "name": "Menoss",
       "password": "123lala"
     },
     {
       "id": 2,
-      "ruc": 123563,
+      "ruc": 10987654321,
       "name": "Pambo",
       "password": "432lala"
     }
   ],
   "invoices": [
     {
-      "id": 1,
       "credit_id": 1,
       "status_id": 0,
       "charges": 0,
-      "start_date": "01-09-2020",
-      "end_date": "01-30-2020"
+      "start_date": "11-21-2020",
+      "end_date": "12-30-2020",
+      "id": 1
     },
     {
-      "id": 2,
       "credit_id": 2,
       "status_id": 0,
-      "charges": 35.5,
-      "start_date": "01-01-2020",
-      "end_date": "01-30-2020"
-    },
-    {
-      "credit_id": 5,
-      "status_id": 0,
-      "charges": 162.16,
-      "start_date": "11-15-2020",
-      "end_date": "11-30-2020",
-      "id": 3
-    },
-    {
-      "credit_id": 6,
-      "status_id": 0,
-      "charges": 86.5,
-      "start_date": "11-15-2020",
-      "end_date": "11-30-2020",
-      "id": 4
-    },
-    {
-      "credit_id": 7,
-      "status_id": 0,
-      "charges": 89.3,
-      "start_date": "11-17-2020",
+      "charges": 0,
+      "start_date": "11-21-2020",
       "end_date": "12-30-2020",
-      "id": 5
+      "id": 2
     },
     {
       "credit_id": 3,
       "status_id": 0,
-      "charges": 0,
-      "start_date": "11-17-2020",
+      "charges": 99.69,
+      "start_date": "11-21-2020",
       "end_date": "12-30-2020",
-      "id": 6
+      "id": 3
     },
     {
-      "credit_id": 8,
+      "credit_id": 4,
       "status_id": 0,
-      "charges": 0,
-      "start_date": "11-17-2020",
+      "charges": 16.2,
+      "start_date": "11-21-2020",
       "end_date": "12-30-2020",
-      "id": 7
-    },
-    {
-      "credit_id": 9,
-      "status_id": 0,
-      "charges": 70.4,
-      "start_date": "11-19-2020",
-      "end_date": "12-30-2020",
-      "id": 8
-    },
-    {
-      "credit_id": 10,
-      "status_id": 0,
-      "charges": 0,
-      "start_date": "11-19-2020",
-      "end_date": "12-30-2020",
-      "id": 9
-    },
-    {
-      "credit_id": 11,
-      "status_id": 0,
-      "charges": 300,
-      "start_date": "11-19-2020",
-      "end_date": "12-30-2020",
-      "id": 10
-    },
-    {
-      "credit_id": 12,
-      "status_id": 0,
-      "charges": 0,
-      "start_date": "11-19-2020",
-      "end_date": "12-30-2020",
-      "id": 11
+      "id": 4
     }
   ],
   "status": [
@@ -598,11 +258,11 @@
       "id": 2,
       "currency_id": 1,
       "price": 7.5,
-      "name": "Foco"
+      "name": "Pan bimbo"
     },
     {
-      "name": "Suavitel 500 ml",
-      "price": 29.9,
+      "name": "Salchichas enlatadas",
+      "price": 8.7,
       "currencyId": 1,
       "id": 3
     },
@@ -615,264 +275,60 @@
   ],
   "order_details": [
     {
-      "id": 1,
-      "product_id": 1,
-      "order_id": 1,
-      "quantity": 2,
-      "price_detail": 10
-    },
-    {
-      "id": 2,
       "product_id": 2,
       "order_id": 1,
-      "quantity": 2,
-      "price_detail": 10
-    },
-    {
-      "id": 3,
-      "product_id": 2,
-      "order_id": 3,
-      "quantity": 5,
-      "price_detail": 10
-    },
-    {
-      "product_id": 2,
-      "order_id": 5,
       "quantity": 1,
       "price_detail": 7,
+      "id": 1
+    },
+    {
+      "product_id": 3,
+      "order_id": 1,
+      "quantity": 1,
+      "price_detail": 8,
+      "id": 2
+    },
+    {
+      "product_id": 2,
+      "order_id": 2,
+      "quantity": 10,
+      "price_detail": 75,
+      "id": 3
+    },
+    {
+      "product_id": 1,
+      "order_id": 2,
+      "quantity": 1,
+      "price_detail": 11,
       "id": 4
     },
     {
-      "product_id": 2,
-      "order_id": 5,
+      "product_id": 3,
+      "order_id": 2,
       "quantity": 1,
-      "price_detail": 7,
+      "price_detail": 8,
       "id": 5
     },
     {
-      "product_id": 1,
-      "order_id": 5,
+      "product_id": 4,
+      "order_id": 2,
       "quantity": 1,
-      "price_detail": 11,
+      "price_detail": 4,
       "id": 6
-    },
-    {
-      "product_id": 2,
-      "order_id": 6,
-      "quantity": 1,
-      "price_detail": 7,
-      "id": 7
-    },
-    {
-      "product_id": 1,
-      "order_id": 6,
-      "quantity": 2,
-      "price_detail": 22,
-      "id": 8
-    },
-    {
-      "product_id": 3,
-      "order_id": 7,
-      "quantity": 1,
-      "price_detail": 29,
-      "id": 9
-    },
-    {
-      "product_id": 1,
-      "order_id": 9,
-      "quantity": 1,
-      "price_detail": 11,
-      "id": 10
-    },
-    {
-      "product_id": 1,
-      "order_id": 10,
-      "quantity": 2,
-      "price_detail": 22,
-      "id": 11
-    },
-    {
-      "product_id": 2,
-      "order_id": 13,
-      "quantity": 1,
-      "price_detail": 7,
-      "id": 12
-    },
-    {
-      "product_id": 3,
-      "order_id": 14,
-      "quantity": 1,
-      "price_detail": 29,
-      "id": 13
-    },
-    {
-      "product_id": 1,
-      "order_id": 18,
-      "quantity": 3,
-      "price_detail": 33,
-      "id": 14
-    },
-    {
-      "product_id": 3,
-      "order_id": 18,
-      "quantity": 1,
-      "price_detail": 29,
-      "id": 15
-    },
-    {
-      "product_id": 2,
-      "order_id": 19,
-      "quantity": 1,
-      "price_detail": 7,
-      "id": 16
-    },
-    {
-      "product_id": 3,
-      "order_id": 20,
-      "quantity": 10,
-      "price_detail": 299,
-      "id": 17
-    },
-    {
-      "product_id": 2,
-      "order_id": 22,
-      "quantity": 1,
-      "price_detail": 7,
-      "id": 18
     }
   ],
   "orders": [
     {
-      "id": 1,
-      "invoice_id": 1,
-      "date": "15-09-2020",
-      "total_price": 10
-    },
-    {
-      "id": 2,
-      "invoice_id": 2,
-      "date": "15-10-2020",
-      "total_price": 10
+      "invoice_id": 4,
+      "date": "11-21-2020",
+      "total_price": 16.2,
+      "id": 1
     },
     {
       "invoice_id": 3,
-      "date": "11-15-2020",
-      "id": 3,
-      "total_price": 10
-    },
-    {
-      "invoice_id": 4,
-      "date": "11-15-2020",
-      "id": 4,
-      "total_price": 10
-    },
-    {
-      "invoice_id": 4,
-      "date": "11-16-2020",
-      "id": 5,
-      "total_price": 69.5
-    },
-    {
-      "invoice_id": 4,
-      "date": "11-16-2020",
-      "total_price": 29.5,
-      "id": 6
-    },
-    {
-      "invoice_id": 5,
-      "date": "11-17-2020",
-      "total_price": 29.9,
-      "id": 7
-    },
-    {
-      "invoice_id": 7,
-      "date": "11-17-2020",
-      "total_price": 0,
-      "id": 8
-    },
-    {
-      "invoice_id": 1,
-      "date": "11-18-2020",
-      "total_price": 11,
-      "id": 9
-    },
-    {
-      "invoice_id": 5,
-      "date": "11-18-2020",
-      "total_price": 22,
-      "id": 10
-    },
-    {
-      "invoice_id": 4,
-      "date": "11-18-2020",
-      "total_price": 0,
-      "id": 11
-    },
-    {
-      "invoice_id": 5,
-      "date": "11-18-2020",
-      "total_price": 0,
-      "id": 12
-    },
-    {
-      "invoice_id": 5,
-      "date": "11-18-2020",
-      "total_price": 7.5,
-      "id": 13
-    },
-    {
-      "invoice_id": 5,
-      "date": "11-18-2020",
-      "total_price": 29.9,
-      "id": 14
-    },
-    {
-      "invoice_id": 5,
-      "date": "11-18-2020",
-      "total_price": 0,
-      "id": 15
-    },
-    {
-      "invoice_id": 6,
-      "date": "11-18-2020",
-      "total_price": 0,
-      "id": 16
-    },
-    {
-      "invoice_id": 2,
-      "date": "11-18-2020",
-      "total_price": 0,
-      "id": 17
-    },
-    {
-      "invoice_id": 8,
-      "date": "11-19-2020",
-      "total_price": 62.9,
-      "id": 18
-    },
-    {
-      "invoice_id": 8,
-      "date": "11-19-2020",
-      "total_price": 7.5,
-      "id": 19
-    },
-    {
-      "invoice_id": 10,
-      "date": "11-19-2020",
-      "total_price": 299,
-      "id": 20
-    },
-    {
-      "invoice_id": 4,
-      "date": "11-19-2020",
-      "total_price": 0,
-      "id": 21
-    },
-    {
-      "invoice_id": 4,
-      "date": "11-19-2020",
-      "total_price": 7.5,
-      "id": 22
+      "date": "11-21-2020",
+      "total_price": 99.69,
+      "id": 2
     }
   ]
 }

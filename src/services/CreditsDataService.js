@@ -21,6 +21,10 @@ class CreditsDataService {
         return http.delete(`/credits/${id}`);
     }
 
+    findByCustomerId(customer_id){
+        return http.get(`/credits?customer_id=${customer_id}`);
+    }
+
 }
 
 export default new CreditsDataService();

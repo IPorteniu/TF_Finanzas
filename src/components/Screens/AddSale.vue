@@ -266,9 +266,7 @@ export default {
       this.currentOrder.total_price =
         this.currentOrder.total_price +
         this.quantity * this.currentTutorial.price;
-       this.currentOrder.total_price = Number(Math.round(this.currentOrder.total_price+'e2')+'e-2');
-
-       console.log(this.currentOrder.total_price);
+      console.log(this.currentOrder.total_price);
 
       this.currentInvoice.charges =
         this.currentInvoice.charges +

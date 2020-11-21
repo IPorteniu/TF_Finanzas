@@ -21,6 +21,9 @@ class OrdersDataService {
         return http.delete(`/orders/${id}`);
     }
 
+    findByInvoiceId(invoice_id) {
+        return http.get(`/orders?invoice_id=${invoice_id}`);
+    }
 }
 
 export default new OrdersDataService();

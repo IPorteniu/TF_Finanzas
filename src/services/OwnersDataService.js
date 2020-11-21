@@ -21,6 +21,9 @@ class OwnersDataService {
         return http.delete(`/owners/${id}`);
     }
 
+    findByRuc(ruc) {
+        return http.get(`/owners?ruc=${ruc}`);
+    }
 }
 
 export default new OwnersDataService();

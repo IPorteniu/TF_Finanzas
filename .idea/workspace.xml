@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="280dadd3-0042-4594-a99e-f044beeb8064" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Screens/AddCredit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Screens/AddCredit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Screens/OrderDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Screens/OrderDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

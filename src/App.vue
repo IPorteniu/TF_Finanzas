@@ -11,6 +11,9 @@
               <li>
                   <a href="/">Inicio</a>
               </li>
+             <li>
+                <a href="/terms&conditions">Terminos y condiciones</a>
+             </li>
               
           </ul>
           <div class="burger" @click="navSlide">

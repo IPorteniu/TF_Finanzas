@@ -41,7 +41,9 @@ export default new Router({
         { path: "/orders/:id", name: "specific-order", component: () => import("./components/Sales/Order") },
 
         { path: "/subscribers/:id", name: "subscriber-details", component: () => import("./components/Subscriber") },
-        { path: "/register", name: "registerS", component: () => import("./components/AddSubscriber")}
-        
+        { path: "/register", name: "registerS", component: () => import("./components/AddSubscriber")},
+        //Terms and conditions
+        { path: "/terms&conditions", name: "t&c", component: () => import("./components/TermsAndConditions")}
+
     ]
 });

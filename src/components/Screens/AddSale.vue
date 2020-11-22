@@ -182,9 +182,16 @@ export default {
       this.currentIndex = -1;
     },
     setActiveTutorial(tutorial, index) {
+      this.quantity = "";
+      document.getElementById('quantity').readOnly = false;
       this.currentTutorial = tutorial;
       this.currentIndex = index;
       console.log(this.currentTutorial.name);
+      console.log(this.currentIndex);
+      if(this.currentIndex == 3){
+        this.quantity = 1;
+        document.getElementById('quantity').readOnly = true;
+      }
     },
     searchTitle() {
       ProductDataService.findByNombre(this.name)

@@ -201,7 +201,7 @@
     {
       "credit_id": 1,
       "status_id": 0,
-      "charges": 0,
+      "charges": 22.39,
       "start_date": "11-21-2020",
       "end_date": "12-30-2020",
       "id": 1
@@ -321,6 +321,20 @@
       "quantity": 1,
       "price_detail": 4,
       "id": 6
+    },
+    {
+      "product_id": 3,
+      "order_id": 3,
+      "quantity": 2,
+      "price_detail": 17,
+      "id": 7
+    },
+    {
+      "product_id": 4,
+      "order_id": 3,
+      "quantity": 1,
+      "price_detail": 4,
+      "id": 8
     }
   ],
   "orders": [
@@ -335,6 +349,12 @@
       "date": "11-21-2020",
       "total_price": 99.69,
       "id": 2
+    },
+    {
+      "invoice_id": 1,
+      "date": "11-21-2020",
+      "total_price": 22.39,
+      "id": 3
     }
   ]
 }

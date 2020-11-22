@@ -1,7 +1,7 @@
 # Finanzas App
 
 Proyecto final del curso de finanzas,
-aplicacion para el manejo de flujo de caja.
+aplicacion para el manejo de créditos otorgados por pequeñas empresas a sus clientes.
 
 ## Project setup
 ```

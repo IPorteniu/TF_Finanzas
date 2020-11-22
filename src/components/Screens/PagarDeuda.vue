@@ -163,6 +163,7 @@ export default {
         invoice_id: "",
         date: "",
         total_price: 0,
+        payed: "",
       },
 
       //Calculation variables
@@ -252,6 +253,7 @@ export default {
           this.total_charged = 0;
           this.interes = 0;
           for(h = 0; h < this.orders.length; h++){
+            if(this.orders[h].payed == false) {
             console.log(this.orders[h].date);
             var date1 = new Date(this.orders[h].date);
             var date2 = new Date(this.pay_day);
@@ -299,6 +301,7 @@ export default {
                   }
               }
             }
+            }
           }
           this.interes = this.total_charged - this.invoice.charges;
           this.add_on = this.detail.maintenance + this.customer.activation;
@@ -311,13 +314,14 @@ export default {
           this.interes = Number(Math.round(this.interes+'e4')+'e-4');
           this.total_charged = Number(Math.round(this.total_charged+'e2')+'e-2');
           this.total_add_on = Number(Math.round(this.total_add_on+'e2')+'e-2');
+          
         })
         .catch((e) => {
           console.log(e);
         });
     },
     PayAll(){
-        alert("Su pago de " + this.invoice.charges + " fue realizado con éxito")
+        alert("Su pago de " + this.total_add_on + " fue realizado con éxito")
         this.customer.activation = 0;
         CustomerDataService.update(this.customer.id, this.customer)
         .then((response) => {
@@ -326,6 +330,7 @@ export default {
         .catch((e) => {
           console.log(e);
         });
+
         this.invoice.charges = 0;
         InvoiceDataService.update(this.invoice.id, this.invoice)
         .then((response) => {
@@ -335,16 +340,34 @@ export default {
           console.log(e);
         });
         console.log(this.customer.activation);
-        CustomerDataService.update(this.customer.id, this.customer)
-        .then((response) => {
-          console.log(response.data);
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-        alert("volviendo al inicio");
 
-        window.history.back();
+        var start = new Date().getTime();
+        for (var i1 = 0; i1 < 1e7; i1++) {
+          if ((new Date().getTime() - start) > 1000) {
+          break;
+          }
+        }
+
+        var h;
+        for(h = 0; h < this.orders.length; h++){
+          this.orders[h].payed = true;
+          OrderDataService.update(this.orders[h].id, this.orders[h])
+          .then((response) => {
+            console.log(response.data);
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+          for (var i2 = 0; i2 < 1e7; i2++) {
+            if ((new Date().getTime() - start) > 500) {
+            break;
+            }
+          }
+        }
+      
+        alert("vuelva al inicio");
+        // document.location.href = `/customer-profile/${this.$route.params.customer_id}/credit/${this.$route.params.credit_id}/detail/${this.$route.params.detail_id}/invoice/${this.$route.params.invoice_id}`;
+        
     },
     PayPartOf(){
         alert("Su pago de " + this.amort + " " + this.currency.unit + " fue realizado con éxito")
@@ -358,6 +381,8 @@ export default {
         });
         this.invoice.charges = parseFloat(this.total_add_on);
         this.invoice.charges = this.invoice.charges - parseFloat(this.amort);
+        this.invoice.charges = Number(Math.round(this.invoice.charges+'e2')+'e-2');
+      
         InvoiceDataService.update(this.invoice.id, this.invoice)
         .then((response) => {
           console.log(response.data);
@@ -365,9 +390,58 @@ export default {
         .catch((e) => {
           console.log(e);
         });
-        alert("volviendo al inicio");
 
-        window.history.back();
+        var start = new Date().getTime();
+        for (var i1 = 0; i1 < 1e7; i1++) {
+          if ((new Date().getTime() - start) > 1000) {
+          break;
+          }
+        }
+
+        var h;
+        for(h = 0; h < this.orders.length; h++){
+          this.orders[h].payed = true;
+          OrderDataService.update(this.orders[h].id, this.orders[h])
+          .then((response) => {
+            console.log(response.data);
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+          for (var i2 = 0; i2 < 1e7; i2++) {
+            if ((new Date().getTime() - start) > 500) {
+            break;
+            }
+          }
+        }
+
+        const data = {
+            invoice_id: this.$route.params.invoice_id,
+            date: this.order.date,
+            total_price: this.invoice.charges,
+            payed: false,
+          };
+
+        OrderDataService.create(data)
+          .then((response) => {
+            console.log(response.data);
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+
+        alert("vuelva al inicio");
+        // document.location.href = `/customer-profile/${this.$route.params.customer_id}/credit/${this.$route.params.credit_id}/detail/${this.$route.params.detail_id}/invoice/${this.$route.params.invoice_id}`;
+
+    },
+    GetCurrentDate() {
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, "0");
+      var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+      var yyyy = today.getFullYear();
+
+      today = mm + "-" + dd + "-" + yyyy;
+      this.order.date = today;
     },
   },
   mounted() {
@@ -375,6 +449,7 @@ export default {
     this.getCredit(this.$route.params.credit_id);
     this.getInvoice(this.$route.params.invoice_id);
     this.getDetail(this.$route.params.detail_id);
+    this.GetCurrentDate();
   },
 };
 </script>

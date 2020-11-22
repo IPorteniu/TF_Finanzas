@@ -438,54 +438,63 @@
       "invoice_id": 4,
       "date": "11-21-2020",
       "total_price": 16.2,
+      "payed": false,
       "id": 1
     },
     {
       "invoice_id": 3,
       "date": "11-21-2020",
       "total_price": 99.69,
+      "payed": false,
       "id": 2
     },
     {
       "invoice_id": 1,
       "date": "11-17-2020",
       "total_price": 22.39,
+      "payed": false,
       "id": 3
     },
     {
       "invoice_id": 1,
       "date": "11-22-2020",
       "total_price": 19.7,
+      "payed": false,
       "id": 4
     },
     {
       "invoice_id": 2,
       "date": "10-20-2020",
       "total_price": 31.09,
+      "payed": false,
       "id": 5
     },
     {
       "invoice_id": 2,
       "date": "11-22-2020",
       "total_price": 13.69,
+      "payed": false,
       "id": 6
     },
     {
       "invoice_id": 5,
       "date": "11-22-2020",
       "total_price": 15,
+      "payed": false,
       "id": 7
     },
     {
       "invoice_id": 5,
       "date": "11-29-2020",
       "total_price": 38.7,
+      "payed": false,
       "id": 8
     },
     {
       "invoice_id": 5,
       "date": "12-10-2020",
       "total_price": 22,
+      "payed": false,
       "id": 9
     }
   ]

@@ -156,6 +156,7 @@ export default {
         invoice_id: "",
         date: "",
         total_price: 0,
+        payed: "",
       },
 
       owner: {
@@ -226,6 +227,7 @@ export default {
             invoice_id: this.currentInvoice["id"],
             date: this.order.date,
             total_price: 0,
+            payed: false,
           };
 
           OrderDataService.create(data)

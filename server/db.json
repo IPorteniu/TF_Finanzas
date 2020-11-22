@@ -5,7 +5,7 @@
       "currency_id": 1,
       "active": 0,
       "amount": 300,
-      "created_in": "11-21-2020",
+      "created_in": "11-16-2020",
       "arrears": 7,
       "id": 1
     },
@@ -14,7 +14,7 @@
       "currency_id": 1,
       "active": 0,
       "amount": 300,
-      "created_in": "11-21-2020",
+      "created_in": "10-17-2020",
       "arrears": 15,
       "id": 2
     },
@@ -35,6 +35,15 @@
       "created_in": "11-21-2020",
       "arrears": 20,
       "id": 4
+    },
+    {
+      "customer_id": 3,
+      "currency_id": 1,
+      "active": 0,
+      "amount": 130,
+      "created_in": "11-22-2020",
+      "arrears": 3,
+      "id": 5
     }
   ],
   "credit_details": [
@@ -77,6 +86,15 @@
       "term_id": 3,
       "capitalization": null,
       "id": 4
+    },
+    {
+      "credit_id": 5,
+      "maintenance": 10,
+      "percentage": 14,
+      "rate_id": 2,
+      "term_id": 2,
+      "capitalization": null,
+      "id": 5
     }
   ],
   "rates": [
@@ -201,17 +219,17 @@
     {
       "credit_id": 1,
       "status_id": 0,
-      "charges": 22.39,
-      "start_date": "11-21-2020",
+      "charges": 42.09,
+      "start_date": "11-16-2020",
       "end_date": "12-30-2020",
       "id": 1
     },
     {
       "credit_id": 2,
       "status_id": 0,
-      "charges": 0,
-      "start_date": "11-21-2020",
-      "end_date": "12-30-2020",
+      "charges": 44.78,
+      "start_date": "10-17-2020",
+      "end_date": "11-30-2020",
       "id": 2
     },
     {
@@ -229,6 +247,14 @@
       "start_date": "11-21-2020",
       "end_date": "12-30-2020",
       "id": 4
+    },
+    {
+      "credit_id": 5,
+      "status_id": 0,
+      "charges": 75.7,
+      "start_date": "11-22-2020",
+      "end_date": "12-30-2020",
+      "id": 5
     }
   ],
   "status": [
@@ -335,6 +361,76 @@
       "quantity": 1,
       "price_detail": 4,
       "id": 8
+    },
+    {
+      "product_id": 1,
+      "order_id": 4,
+      "quantity": 1,
+      "price_detail": 11,
+      "id": 9
+    },
+    {
+      "product_id": 3,
+      "order_id": 4,
+      "quantity": 1,
+      "price_detail": 8,
+      "id": 10
+    },
+    {
+      "product_id": 3,
+      "order_id": 5,
+      "quantity": 3,
+      "price_detail": 26,
+      "id": 11
+    },
+    {
+      "product_id": 4,
+      "order_id": 5,
+      "quantity": 1,
+      "price_detail": 4,
+      "id": 12
+    },
+    {
+      "product_id": 3,
+      "order_id": 6,
+      "quantity": 1,
+      "price_detail": 8,
+      "id": 13
+    },
+    {
+      "product_id": 4,
+      "order_id": 6,
+      "quantity": 1,
+      "price_detail": 4,
+      "id": 14
+    },
+    {
+      "product_id": 2,
+      "order_id": 7,
+      "quantity": 2,
+      "price_detail": 15,
+      "id": 15
+    },
+    {
+      "product_id": 3,
+      "order_id": 8,
+      "quantity": 1,
+      "price_detail": 8,
+      "id": 16
+    },
+    {
+      "product_id": 2,
+      "order_id": 8,
+      "quantity": 4,
+      "price_detail": 30,
+      "id": 17
+    },
+    {
+      "product_id": 1,
+      "order_id": 9,
+      "quantity": 2,
+      "price_detail": 22,
+      "id": 18
     }
   ],
   "orders": [
@@ -352,9 +448,45 @@
     },
     {
       "invoice_id": 1,
-      "date": "11-21-2020",
+      "date": "11-17-2020",
       "total_price": 22.39,
       "id": 3
+    },
+    {
+      "invoice_id": 1,
+      "date": "11-22-2020",
+      "total_price": 19.7,
+      "id": 4
+    },
+    {
+      "invoice_id": 2,
+      "date": "10-20-2020",
+      "total_price": 31.09,
+      "id": 5
+    },
+    {
+      "invoice_id": 2,
+      "date": "11-22-2020",
+      "total_price": 13.69,
+      "id": 6
+    },
+    {
+      "invoice_id": 5,
+      "date": "11-22-2020",
+      "total_price": 15,
+      "id": 7
+    },
+    {
+      "invoice_id": 5,
+      "date": "11-29-2020",
+      "total_price": 38.7,
+      "id": 8
+    },
+    {
+      "invoice_id": 5,
+      "date": "12-10-2020",
+      "total_price": 22,
+      "id": 9
     }
   ]
 }

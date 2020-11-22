@@ -105,6 +105,7 @@ import InvoiceDataService from "@/services/InvoicesDataService";
 
 import TermDataService from "@/services/TermsDataService";
 import CurrencyDataService from "@/services/CurrenciesDataService";
+import OrderDataService from "@/services/OrdersDataService";
 
 export default {
   name: "CreditPayment",
@@ -156,6 +157,12 @@ export default {
         id: null,
         name: "",
         unit: "",
+      },
+      order: {
+        id: null,
+        invoice_id: "",
+        date: "",
+        total_price: 0,
       },
 
       //Calculation variables
@@ -237,70 +244,77 @@ export default {
           console.log(e);
         });
     },
-    PayDebt() {
-      console.log(this.credit.created_in);
-      var date1 = new Date(this.credit.created_in);
-      var date2 = new Date(this.pay_day);
-      var date3 = new Date(this.invoice.end_date);
-      console.log(date1);
-      console.log(date2);
-      console.log(date3);
+    PayDebt(){
+      OrderDataService.findByInvoiceId(this.$route.params.invoice_id)
+        .then((response) => {
+          this.orders = response.data;
+          var h;
+          this.total_charged = 0;
+          this.interes = 0;
+          for(h = 0; h < this.orders.length; h++){
+            console.log(this.orders[h].date);
+            var date1 = new Date(this.orders[h].date);
+            var date2 = new Date(this.pay_day);
+            var date3 = new Date(this.invoice.end_date);
 
-      console.log(this.credit.created_in);
-      console.log(this.pay_day);
-      console.log(this.invoice.end_date);
+             // To calculate the time difference of two dates
+            var Difference_In_Time = date2.getTime() - date1.getTime();
 
+            // To calculate the no. of days between two dates
+            var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+            var Difference_In_Years = parseInt(Difference_In_Time / (1000 * 3600 * 24 * 360));
 
-      // To calculate the time difference of two dates
-      var Difference_In_Time = date2.getTime() - date1.getTime();
-
-      // To calculate the no. of days between two dates
-      var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-      var Difference_In_Years = parseInt(Difference_In_Time / (1000 * 3600 * 24 * 360));
-
-      //To display the final no. of days (result)
-      console.log(Difference_In_Days);
-      this.t = Difference_In_Days; //Se mantiene para todas las tasas
-      //funciona para hasta 7 años
-      var i;
-      for(i = 1; i <= Difference_In_Years; i++){
-        if(this.t > 360*i && this.t <= 365*i+1){
-          this.t = 360*i;
-        }
-      }
-      console.log(this.t);
-
-      //Calculo de tasas
-      //rate_id 1 = simple; rate_id 2 = Efectiva; rate_id 3 = Nominal;
-      if (this.detail.rate_id == 1) {
-        this.interes = this.invoice.charges * (this.detail.percentage / 100) * (this.t / 360);
-        this.total_charged = this.invoice.charges * (1 + (this.detail.percentage / 100) * (this.t / 360));
-        console.log(this.interes);
-        console.log(this.total_charged);
-      } else {
-        if (this.detail.rate_id == 3) {
-          this.m = this.term.time / this.detail.capitalization.time;
-          this.n = this.t / this.detail.capitalization.time;
-          this.total_charged = this.invoice.charges * Math.pow((1 + (this.detail.percentage / 100) / this.m), this.n);
-          this.interes = this.total_charged - this.invoice.charges;
-          console.log(this.m);
-          console.log(this.n);
-          console.log(this.total_charged);
-        } else {
-            if(this.detail.rate_id == 2) {
-                this.total_charged = this.invoice.charges * Math.pow((1+this.detail.percentage/100),(this.t/this.term.time));
-                this.interes = this.total_charged - this.invoice.charges;
+            //To display the final no. of days (result)
+            console.log(Difference_In_Days);
+            Difference_In_Days = Number(Math.round(Difference_In_Days+'e0')+'e-0');
+            this.t = Difference_In_Days; //Se mantiene para todas las tasas
+            //funciona para hasta 7 años
+            var i;
+            for(i = 1; i <= Difference_In_Years; i++){
+              if(this.t > 360*i && this.t <= 365*i+1){
+                this.t = 360*i;
+              }
             }
-        }
-      }
-      this.add_on = this.detail.maintenance + this.customer.activation;
-      if(date2 > date3){
-          this.add_on = this.credit.arrears + this.detail.maintenance + this.customer.activation;
-      }
-      this.total_add_on = this.total_charged + this.add_on;
-      this.interes = Number(Math.round(this.interes+'e4')+'e-4');
-      this.total_charged = Number(Math.round(this.total_charged+'e2')+'e-2');
-      this.total_add_on = Number(Math.round(this.total_add_on+'e2')+'e-2');
+            console.log(this.t);
+
+            //Calculo de tasas
+            //rate_id 1 = simple; rate_id 2 = Efectiva; rate_id 3 = Nominal;
+            if (this.detail.rate_id == 1) {
+              this.interes = this.interes + this.orders[h].total_price * (this.detail.percentage / 100) * (this.t / 360);
+              this.total_charged = this.total_charged + this.orders[h].total_price * (1 + (this.detail.percentage / 100) * (this.t / 360));
+              console.log(this.interes);
+              console.log(this.total_charged);
+            } else {
+              if (this.detail.rate_id == 3) {
+                this.m = this.term.time / this.detail.capitalization.time;
+                this.n = this.t / this.detail.capitalization.time;
+                this.total_charged = this.total_charged + this.orders[h].total_price * Math.pow((1 + (this.detail.percentage / 100) / this.m), this.n);
+                console.log(this.m);
+                console.log(this.n);
+                console.log(this.total_charged);
+              } else {
+                  if(this.detail.rate_id == 2) {
+                      this.total_charged = this.total_charged + this.orders[h].total_price * Math.pow((1+this.detail.percentage/100),(this.t/this.term.time));
+                      console.log(this.total_charged);
+                  }
+              }
+            }
+          }
+          this.interes = this.total_charged - this.invoice.charges;
+          this.add_on = this.detail.maintenance + this.customer.activation;
+          console.log(this.add_on);
+          if(date2 > date3){
+              this.add_on = this.credit.arrears + this.detail.maintenance + this.customer.activation;
+          }
+          this.total_add_on = 0;
+          this.total_add_on = this.total_add_on + this.total_charged + this.add_on;
+          this.interes = Number(Math.round(this.interes+'e4')+'e-4');
+          this.total_charged = Number(Math.round(this.total_charged+'e2')+'e-2');
+          this.total_add_on = Number(Math.round(this.total_add_on+'e2')+'e-2');
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     },
     PayAll(){
         alert("Su pago de " + this.invoice.charges + " fue realizado con éxito")
